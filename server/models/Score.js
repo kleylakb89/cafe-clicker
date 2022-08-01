@@ -5,6 +5,11 @@ const scoreSchema = new Schema ({
     type: Int,
     required: true,
   },
+  user: {
+    type: String,
+    required: true,
+  }
+  
 });
 
 const Score = model('Score', scoreSchema);
