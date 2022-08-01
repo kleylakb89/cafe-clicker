@@ -1,6 +1,10 @@
 const { Schema, model } = require('mongoose');
 
-const gameSchema = new Schema ({
+const gameSchema = new Schema({
+  user: {
+    type: String,
+    required: true,
+  },
   clicks: {
     type: Int,
     required: true,
