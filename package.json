@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/kleylakb89/cafe-clicker#readme",
   "dependencies": {
-    "concurrently": "^7.3.0"
+    "concurrently": "^7.3.0",
+    "react-router-dom": "^6.3.0"
   }
 }
