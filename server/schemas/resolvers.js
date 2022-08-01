@@ -2,14 +2,14 @@ const { Game, Score, User } = require('../models');
 
 const resolvers = {
     Query: {
-        score: async (parent, { username }) => {
-            return await Score.findOne({ user: username });
+        score: async (parent, { user }) => {
+            return await Score.findOne({ user });
         },
         scores: async () => {
             return await Score.find();
         },
-        game: async (parent, { username }) => {
-            return await Game.findOne({ user: username });
+        game: async (parent, { user }) => {
+            return await Game.findOne({ user });
         },
         user: async (parent, { _id }) => {
             return await User.findById(_id);
@@ -28,7 +28,7 @@ const resolvers = {
             const game = await Game.findOneAndUpdate(
                 { _id },
                 {
-                    $inc: {
+                    $set: {
                         clicks,
                         autoClicker,
                         multiClicker,
@@ -40,9 +40,9 @@ const resolvers = {
             );
             return game;
         },
-        deleteGame: async (parent, { gameId }) => {
+        deleteGame: async (parent, { _id }) => {
             const game = await Game.findOneAndDelete(
-                { _id: gameId }
+                { _id }
             );
             return game;
         },
@@ -53,14 +53,14 @@ const resolvers = {
         updateScore: async (parent, { _id, score, user }) => {
             const upScore = await Score.findOneAndUpdate(
                 { _id },
-                { $inc: { score, user }},
+                { $set: { score, user }},
                 { new: true },
             );
             return upScore;
         },
-        resetScore: async (parent, { scoreId }) => {
+        resetScore: async (parent, { _id }) => {
             const score = await Score.findOneAndDelete(
-                { _id: scoreId }
+                { _id }
             );
             return score;
         },
