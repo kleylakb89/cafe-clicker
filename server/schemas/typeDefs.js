@@ -13,6 +13,11 @@ const typeDefs = gql`
         #password: String!
     }
 
+    type Auth {
+        token: ID!
+        user: User
+    }
+
     type Game {
         _id: ID!
         user: String!
@@ -34,7 +39,8 @@ const typeDefs = gql`
         createUser(
             username: String!,
             password: String!,
-        ): User
+        ): Auth
+        login(username: String!, password: String!): Auth
         createGame(
             user: String!,
             clicks: Int!,
