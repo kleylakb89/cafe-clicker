@@ -1,20 +1,176 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dosis&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Dosis&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Dosis&display=swap");
 
 .layout {
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
   width: 80%;
   height: 70vh;
   box-shadow: 15px 15px 10px rgba(122, 73, 102, 0.3);
   background-color: #f9f1cd;
-
+}
+.powerups {
+  position: relative;
+  top: -30vh;
+  margin-top: -5%;
 }
 
-.cafe-title{
-  font-family: 'Caveat', cursive;
-  font-family: 'Dosis', sans-serif;
+.power-title {
+  position: relative;
+  left: -39%;
+  top: -55%;
+  font-size: 40px;
+  font-family: "Caveat", cursive;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: rgb(36, 8, 58);
+  text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.powerups button {
+  background-color: #04aa6d;
+  border: 1px solid green;
+  margin: 8px;
+  margin-left: 20px;
+  font-size: 24px;
+  color: white;
+  padding: 14px;
+  cursor: pointer;
+  width: 20%;
+  display: block;
+  font-family: "Caveat", cursive;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+}
+.powerups button:hover {
+  background-color: rgb(185, 232, 90);
+  color: black;
+}
+
+.cafe-title {
+  font-family: "Caveat", cursive;
+  font-family: "Dosis", sans-serif;
   font-size: 80px;
-  color: rgb(247, 185, 52);
+  color: rgb(251, 239, 214);
+  text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
+  background-color: #14a871;
+  border-bottom: 8px solid rgb(185, 232, 90);
+}
+
+.counter {
+  position: relative;
+  left: -39%;
+  top: -62%;
+  font-size: 40px;
+  font-family: "Caveat", cursive;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: rgb(36, 8, 58);
+  text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
+}
+.num-of-clicks {
+  position: relative;
+  left: -39%;
+  top: -60%;
+  font-size: 40px;
+  font-family: "Caveat", cursive;
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  color: #14a871;
+  text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.instructions {
+  width: 400px;
+  color: white;
+  position: relative;
+  text-align: center;
+  right: -71.5%;
+  top: -775px;
+  
+  padding: 10px;
+  border: 4px solid linear-gradient(to bottom, #f7e5cd, #d2ad50, #7fc68c);;
+}
+.how-title {
+  position: relative;
+  right: -36%;
+  top: -735px;
+  font-family: "Caveat", cursive;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  color: rgb(36, 8, 58);
+  text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
+}
+.how-play {
+ 
+  font-family: "Caveat", cursive;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  color: rgb(185, 80, 14);
+}
+.game-funcs {
+  position: relative;
+  top: -76vh;
+  right: -1180PX;
+}
+
+.game-funcs button {
+  background-color: #04aa6d;
+  border: 1px solid green;
+  margin: 8px;
+  margin-left: 20px;
+  font-size: 24px;
+  color: white;
+  padding: 14px;
+  cursor: pointer;
+  width: 20%;
+  display: block;
+  font-family: "Caveat", cursive;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+}
+.game-funcs button:hover {
+  background-color: rgb(185, 232, 90);
+  color: black;
+}
+@media screen and (max-width: 1500px) {
+
+  .counter {
+    top: -82%;
+    font-size: 30px;
+  }
+  .num-of-clicks {
+    top: -80%;
+    font-size: 35px;
+  }
+  .power-title {
+    top: -75%;
+    font-size: 30px;
+    
+  }
+  
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 8px;
+    margin-left: 20px;
+    font-size: 18px;
+    padding: 8px;
+  }
+  .powerups {
+    position: relative;
+    top: -45vh;
+    margin-top: -5%;
+  }
+  
 }
