@@ -3,19 +3,19 @@ import "./style.css";
 
 function Nav() {
   return (
-    <div class="flex-container">
+    <div className="flex-container">
       <div>
-        <a class="tile" href="#">
+        <a className="tile" href="/">
           Logout
         </a>
       </div>
       <div>
-        <a class="tile" href="/">
+        <a className="tile" href="/">
           Leader Board
         </a>
       </div>
       <div>
-        <a class="tile" href="/">
+        <a className="tile" href="/">
           View Cafe
         </a>
       </div>
