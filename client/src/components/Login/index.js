@@ -1,0 +1,80 @@
+import React, { useState } from 'react';
+import Auth from '../../utils/auth';
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from '../../utils/mutations';
+import { Link } from 'react-router-dom';
+
+const Login = () => {
+  const [formState, setFormState] = useState({ username: '', password: '' });
+  const [loginUser, { error, data }] = useMutation(LOGIN_USER);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await loginUser({
+        variables: { ...formState },
+      });
+
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+
+    setFormState({
+      username: '',
+      password: '',
+    });
+  };
+
+  return (
+    <div className="login">
+      {data ? (
+        <p>
+          Success! You may now head{' '}
+          <Link to="/">back to the homepage.</Link>
+        </p>
+      ) : (
+        <form onSubmit={handleFormSubmit}>
+          <label for="chk" aria-hidden="true">
+            <span className="log-title">Login</span>
+          </label>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required=""
+            value={formState.username}
+            onChange={handleChange}
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required=""
+            value={formState.password}
+            onChange={handleChange}
+          />
+          <button className="in-btn">Login</button>
+        </form>
+      )}
+
+      {error && (
+        <div>
+          {error.message}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Login;

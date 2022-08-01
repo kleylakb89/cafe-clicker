@@ -1,4 +1,6 @@
 const { Game, Score, User } = require('../models');
+const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
     Query: {
@@ -18,7 +20,24 @@ const resolvers = {
     Mutation: {
         createUser: async (parent, args) => {
             const user = await User.create(args);
-            return user;
+            const token = signToken(user);
+            return { token, user };
+        },
+        login: async (parent, { username, password }) => {
+            const profile = await User.findOne({ username });
+      
+            if (!profile) {
+              throw new AuthenticationError('No profile with this username found!');
+            }
+      
+            const correctPw = await profile.isCorrectPassword(password);
+      
+            if (!correctPw) {
+              throw new AuthenticationError('Incorrect password!');
+            }
+      
+            const token = signToken(profile);
+            return { token, profile };
         },
         createGame: async (parent, args) => {
             const game = await Game.create(args);
