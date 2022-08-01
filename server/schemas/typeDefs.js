@@ -10,7 +10,7 @@ const typeDefs = gql`
     type User {
         _id: ID!
         username: String!
-        password: String!
+        #password: String!
     }
 
     type Game {
@@ -27,7 +27,7 @@ const typeDefs = gql`
         score(user: String): Score
         scores: [Score]
         game(user: String): Game
-        user(_id: String): User
+        user(_id: ID!): User
     }
 
     type Mutation {
@@ -36,6 +36,7 @@ const typeDefs = gql`
             password: String!,
         ): User
         createGame(
+            user: String!,
             clicks: Int!,
             autoClicker: Boolean!,
             multiClicker: Boolean!,
