@@ -6,7 +6,7 @@ const gameSchema = new Schema({
     required: true,
   },
   clicks: {
-    type: Int,
+    type: Number,
     required: true,
   },
   autoClicker: {
@@ -25,7 +25,7 @@ const gameSchema = new Schema({
     default: false,
   },
   cafeState: {
-    type: Int,
+    type: Number,
     required: true,
   }
 });

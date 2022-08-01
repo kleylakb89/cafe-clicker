@@ -2,20 +2,17 @@ const { Game, Score, User } = require('../models');
 
 const resolvers = {
     Query: {
-        score: async (parent, { user }) => {
-            const params = user ? { user } : {};
-            return Score.find(params);
+        score: async (parent, { username }) => {
+            return await Score.findOne({ user: username });
         },
         scores: async () => {
-            return Score.find();
+            return await Score.find();
         },
-        game: async (parent, { user }) => {
-            const params = user ? { user } : {};
-            return Game.find(params);
+        game: async (parent, { username }) => {
+            return await Game.findOne({ user: username });
         },
         user: async (parent, { _id }) => {
-            const params = _id ? { _id } : {};
-            return User.find(params);
+            return await User.findById(_id);
         },
     },
     Mutation: {
@@ -54,12 +51,12 @@ const resolvers = {
             return score;
         },
         updateScore: async (parent, { _id, score, user }) => {
-            const score = await Score.findOneAndUpdate(
+            const upScore = await Score.findOneAndUpdate(
                 { _id },
                 { $inc: { score, user }},
                 { new: true },
             );
-            return score;
+            return upScore;
         },
         resetScore: async (parent, { scoreId }) => {
             const score = await Score.findOneAndDelete(

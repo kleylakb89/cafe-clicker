@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const scoreSchema = new Schema ({
   score: {
-    type: Int,
+    type: Number,
     required: true,
   },
   user: {
