@@ -31,7 +31,7 @@ function Signup(props) {
         variables: { ...formState },
       });
 
-      Auth.login(data.addProfile.token);
+      Auth.login(data.createUser.token);
     } catch (e) {
       console.error(e);
     }
@@ -49,7 +49,7 @@ function Signup(props) {
             </p>
           ) : (
             <form onSubmit={handleFormSubmit}>
-              <label for="chk" aria-hidden="true">
+              <label htmlFor="chk" aria-hidden="true">
                 Sign up
               </label>
               <input
@@ -57,7 +57,7 @@ function Signup(props) {
                 name="username"
                 placeholder="Username"
                 required=""
-                value={formState.username}
+                defaultValue={formState.username}
                 onChange={handleChange}
               />
               <input
@@ -65,7 +65,7 @@ function Signup(props) {
                 name="password"
                 placeholder="Password"
                 required=""
-                value={formState.password}
+                defaultValue={formState.password}
                 onChange={handleChange}
               />
               <button className="up-btn">Sign up</button>

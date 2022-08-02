@@ -42,7 +42,7 @@ const typeDefs = gql`
         ): Auth
         login(username: String!, password: String!): Auth
         createGame(
-            user: String!,
+            username: String!,
             clicks: Int!,
             autoClicker: Boolean!,
             multiClicker: Boolean!,
@@ -62,7 +62,7 @@ const typeDefs = gql`
         ): Game
         createScore(
             score: Int!,
-            user: String!,
+            username: String!,
         ): Score
         updateScore(
             _id: String!,

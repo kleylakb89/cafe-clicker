@@ -35,7 +35,7 @@ const resolvers = {
             if (!correctPw) {
               throw new AuthenticationError('Incorrect password!');
             }
-      
+
             const token = signToken(profile);
             return { token, profile };
         },
