@@ -24,7 +24,7 @@ const Login = () => {
       const { data } = await loginUser({
         variables: { ...formState },
       });
-
+      console.log(data);
       Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
@@ -45,7 +45,7 @@ const Login = () => {
         </p>
       ) : (
         <form onSubmit={handleFormSubmit}>
-          <label for="chk" aria-hidden="true">
+          <label htmlFor="chk" aria-hidden="true">
             <span className="log-title">Login</span>
           </label>
           <input
@@ -53,7 +53,7 @@ const Login = () => {
             name="username"
             placeholder="Username"
             required=""
-            value={formState.username}
+            defaultValue={formState.username}
             onChange={handleChange}
           />
           <input
@@ -61,7 +61,7 @@ const Login = () => {
             name="password"
             placeholder="Password"
             required=""
-            value={formState.password}
+            defaultValue={formState.password}
             onChange={handleChange}
           />
           <button className="in-btn">Login</button>
