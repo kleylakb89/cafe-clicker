@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "./style.css";
 import Nav from "../../components/Nav/index";
 import ClickCounter from '../../components/ClickCounter';
+import AutoClicker from '../../components/AutoClicker';
+import MultiClicker from '../../components/MultiClicker';
+import PassiveClicker from '../../components/PassiveClicker';
+import SaveGame from "../../components/SaveGame";
 
 function Game() {
   return (
