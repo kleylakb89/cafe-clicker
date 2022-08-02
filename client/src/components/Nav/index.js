@@ -10,6 +10,11 @@ function Nav() {
   return (
     <div className="flex-container">
       <div>
+        <a className="tile" href="/">
+          Home
+        </a>
+      </div>
+      <div>
         <a className="tile" href="/login" onClick={signout}>
           Logout
         </a>

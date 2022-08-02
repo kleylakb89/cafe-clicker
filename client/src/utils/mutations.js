@@ -36,8 +36,8 @@ export const CREATE_GAME = gql`
   }
 `;
 export const UPDATE_GAME = gql`
-  mutation updateGame($user: String!, $clicks: Int!, $autoClicker: Boolean!, $multiClicker: Boolean!, $passiveClicker: Boolean!, $cafeState: Int!) {
-    updateGame(user: $user, clicks: $clicks, autoClicker: $autoClicker, multiClicker: $multiClicker, passiveClicker: $passiveClicker, cafeState: $cafeState) {
+  mutation updateGame($clicks: Int!, $autoClicker: Boolean!, $multiClicker: Boolean!, $passiveClicker: Boolean!, $cafeState: Int!) {
+    updateGame(clicks: $clicks, autoClicker: $autoClicker, multiClicker: $multiClicker, passiveClicker: $passiveClicker, cafeState: $cafeState) {
       user
       clicks
       autoClicker

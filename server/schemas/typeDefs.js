@@ -49,7 +49,6 @@ const typeDefs = gql`
             cafeState: Int!
         ): Game
         updateGame(
-            _id: String!,
             clicks: Int!,
             autoClicker: Boolean!,
             multiClicker: Boolean!,

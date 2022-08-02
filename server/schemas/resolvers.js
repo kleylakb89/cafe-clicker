@@ -10,8 +10,8 @@ const resolvers = {
         scores: async () => {
             return await Score.find();
         },
-        game: async (parent, { user }) => {
-            return await Game.findOne({ user });
+        game: async (parent, args, {user}) => {
+            return await Game.findOne({ user: user.username });
         },
         user: async (parent, { _id }) => {
             return await User.findById(_id);
@@ -43,9 +43,9 @@ const resolvers = {
             const game = await Game.create({...args, user: user.username});
             return game;
         },
-        updateGame: async (parent, { _id, clicks, autoClicker, multiClicker, passiveClicker, cafeState }) => {
+        updateGame: async (parent, { clicks, autoClicker, multiClicker, passiveClicker, cafeState }, {user}) => {
             const game = await Game.findOneAndUpdate(
-                { _id },
+                { user: user.username },
                 {
                     $set: {
                         clicks,

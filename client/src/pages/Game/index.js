@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useQuery } from '@apollo/client';
 import "./style.css";
 import Nav from "../../components/Nav/index";
 import ClickCounter from '../../components/ClickCounter';
@@ -9,14 +10,24 @@ import SaveGame from "../../components/SaveGame";
 import Auth from '../../utils/auth';
 import Signup from "../Signup";
 import SubmitScore from "../../components/SubmitScore";
+import { QUERY_GAME } from '../../utils/queries';
 
 
 function Game() {
+  
   let [count, setCount] = useState(0);
   let [auto, setAuto] = useState(false);
   let [multi, setMulti] = useState(false);
   let [passive, setPassive] = useState(false);
   let [cafe, setCafe] = useState(0);
+  
+  const {loading, data} = useQuery(QUERY_GAME);
+  console.log(data);
+
+  // if (data) {
+  //   setCount(data.clicks);
+  // }
+
 
   const handleClick = () => {
     setCount((count + 1));
