@@ -214,3 +214,96 @@
     
   }
 }
+@media screen and (max-width: 415px) {
+  .layout {
+    width: 100%;
+  }
+  .counter {
+    top: -38%;
+    font-size: 30px;
+    left: -28%;
+  }
+  .num-of-clicks {
+    top: -38%;
+    font-size: 50px;
+    left: -31%;
+
+  }
+  .cafe-title {
+    font-family: "Caveat", cursive;
+    font-family: "Dosis", sans-serif;
+    font-size: 50px;
+    color: rgb(251, 239, 214);
+    text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
+    background-color: #14a871;
+    border-bottom: 8px solid rgb(185, 232, 90);
+  }
+  .avac-img{
+    width: 470px;
+    margin-top: -35px;
+    margin-left: 65px;
+  }
+  .power-title {
+    top: -35%;
+    font-size: 25px;
+    left: -30%;
+  }
+  
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 8px;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 5px;
+    width: 30%;
+  }
+  .powerups {
+    position: relative;
+    top: -22vh;
+    margin-top: -5%;
+    left: 3%;
+
+  }
+
+
+  .instructions {
+    right: -6%;
+    top: -280px;
+    padding: 10px;
+    width: 350px;
+  }
+  .how-title {
+    position: relative;
+    right: -4%;
+    top: -232px;
+    font-size: 35px;
+   
+  }
+  .how-play {
+   
+    font-family: "Caveat", cursive;
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: rgb(185, 80, 14);
+  }
+  .game-funcs {
+    position: relative;
+    top: -25vh;
+    right: -220PX;
+  }
+  
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 8px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: white;
+    padding: 5px;
+    width: 30%;;
+    
+  }
+}
