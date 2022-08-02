@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_GAME } from '../../utils/mutations';
-import Auth from '../../utils/auth';
 
 export default function SaveGame({count, auto, multi, passive, cafe}) {
     const [createGame, {error}] = useMutation(CREATE_GAME);
 
-    console.log(Auth.getProfile);
     const handleSave = async (event) => {
         event.preventDefault();
         
@@ -19,7 +17,8 @@ export default function SaveGame({count, auto, multi, passive, cafe}) {
                     passiveClicker: passive,
                     cafeState: cafe
                 }
-            })
+            });
+            console.log(data);
         } catch (err) {
             console.error(err);
         }

@@ -42,7 +42,6 @@ const typeDefs = gql`
         ): Auth
         login(username: String!, password: String!): Auth
         createGame(
-            username: String!,
             clicks: Int!,
             autoClicker: Boolean!,
             multiClicker: Boolean!,

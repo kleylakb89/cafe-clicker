@@ -7,7 +7,7 @@ import Login from '../../components/Login';
 
 import Auth from '../../utils/auth';
 
-function Signup(props) {
+function Signup() {
   const [formState, setFormState] = useState({
     name: '',
     password: '',
