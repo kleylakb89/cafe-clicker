@@ -65,8 +65,8 @@ const resolvers = {
             );
             return game;
         },
-        createScore: async (parent, args) => {
-            const score = await Score.create(args);
+        createScore: async (parent, args, {user}) => {
+            const score = await Score.create({...args, user: user.username});
             return score;
         },
         updateScore: async (parent, { _id, score, user }) => {
