@@ -6,6 +6,9 @@ import AutoClicker from '../../components/AutoClicker';
 import MultiClicker from '../../components/MultiClicker';
 import PassiveClicker from '../../components/PassiveClicker';
 import SaveGame from "../../components/SaveGame";
+import Auth from '../../utils/auth';
+import Signup from "../Signup";
+
 
 function Game() {
   let [count, setCount] = useState(0);
@@ -35,6 +38,8 @@ function Game() {
 
   return (
     <div>
+      {Auth.loggedIn() ? (
+        <>
       <Nav />
       <div className="game-space">
         <div className="layout">
@@ -60,6 +65,9 @@ function Game() {
 
         </div>
       </div>
+      </>) : (
+        <Signup />
+      )}
     </div>
   );
 }
