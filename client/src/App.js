@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from "./pages/Signup";
 import Game from "./pages/Game";
 import Leaderboard from './pages/Leaderboard';
+import CafeState from './pages/Cafe';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
