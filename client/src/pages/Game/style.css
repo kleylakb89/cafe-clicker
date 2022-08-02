@@ -96,7 +96,6 @@
   top: -775px;
   
   padding: 10px;
-  border: 4px solid linear-gradient(to bottom, #f7e5cd, #d2ad50, #7fc68c);;
 }
 .how-title {
   position: relative;
@@ -146,15 +145,15 @@
 @media screen and (max-width: 1500px) {
 
   .counter {
-    top: -82%;
+    top: -60%;
     font-size: 30px;
   }
   .num-of-clicks {
-    top: -80%;
-    font-size: 35px;
+    top: -57%;
+    font-size: 50px;
   }
   .power-title {
-    top: -75%;
+    top: -53%;
     font-size: 30px;
     
   }
@@ -163,14 +162,55 @@
     background-color: #04aa6d;
     border: 1px solid green;
     margin: 8px;
-    margin-left: 20px;
+    margin-left: 10px;
     font-size: 18px;
-    padding: 8px;
+    padding: 5px;
   }
   .powerups {
     position: relative;
-    top: -45vh;
+    top: -29vh;
     margin-top: -5%;
   }
+  .avac-img{
+    width: 550px;
+    margin-top: -45px;
+  }
+  .instructions {
+    right: -63.5%;
+    top: -517px;
+    padding: 10px;
+    width: 350px;
+  }
+  .how-title {
+    position: relative;
+    right: -33%;
+    top: -480px;
+    font-size: 35px;
+   
+  }
+  .how-play {
+   
+    font-family: "Caveat", cursive;
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: rgb(185, 80, 14);
+  }
+  .game-funcs {
+    position: relative;
+    top: -70vh;
+    right: -780PX;
+  }
   
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 8px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+    padding: 5px;
+    
+  }
 }

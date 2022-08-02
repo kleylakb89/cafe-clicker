@@ -12,7 +12,7 @@ function Game() {
           <div className="container-fluid"></div>
           <h1 className="cafe-title">Cafe Clicker</h1>
           <div className="toast">
-            <img src={Avac1} alt="Avacado" width="700px" className="" />
+            <img src={Avac1} alt="Avocado" width="700px" className="avac-img" />
           </div>
           <div className="counter">Click Count:</div>
           <div className="num-of-clicks">043</div>
