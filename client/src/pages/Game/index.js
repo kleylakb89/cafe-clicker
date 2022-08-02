@@ -9,9 +9,27 @@ import SaveGame from "../../components/SaveGame";
 
 function Game() {
   let [count, setCount] = useState(0);
+  let [auto, setAuto] = useState(false);
+  let [multi, setMulti] = useState(false);
+  let [passive, setPassive] = useState(false);
+  let [cafe, setCafe] = useState(0);
 
   const handleClick = () => {
     setCount((count + 1));
+  };
+  const handleAuto = () => {
+    setAuto(true);
+  };
+  const handleMulti = () => {
+    setMulti(true);
+  };
+  const handlePassive = () => {
+    setPassive(true);
+  };
+  const handleCafe = () => {
+    if (cafe < 6) {
+      setCafe((cafe + 1));
+    }
   };
 
 
@@ -20,7 +38,6 @@ function Game() {
       <Nav />
       <div className="game-space">
         <div className="layout">
-          <div className="container-fluid"></div>
           <h1 className="cafe-title">Cafe Clicker</h1>
           <ClickCounter count={count} handleClick={handleClick} />
           <div className="power-title">Power Ups</div>
@@ -30,7 +47,7 @@ function Game() {
             <button className="power-btn">Passive Clicker</button>
           </div>
           <div className="game-funcs">
-            <button className="game-btn">Save Game</button>
+            <SaveGame count={count} auto={auto} multi={multi} passive={passive} cafe={cafe}/>
             <button className="game-btn">Submit Score</button>
           </div>
 
