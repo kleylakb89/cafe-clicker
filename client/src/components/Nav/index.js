@@ -1,9 +1,10 @@
 import React from "react";
 import "./style.css";
 import Auth from '../../utils/auth';
+import CafeState from '../../pages/Cafe/index';
 
 
-function Nav() {
+function Nav({cafe}) {
   const signout = () => {
     Auth.logout();
   }
@@ -24,11 +25,11 @@ function Nav() {
           Leader Board
         </a>
       </div>
-      <div>
-        <a className="tile" href="/">
-          View Cafe
+      {/* <div>
+        <a className="tile" href="/cafe">
+          <CafeState cafe={cafe} />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }

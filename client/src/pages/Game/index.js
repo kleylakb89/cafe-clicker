@@ -11,6 +11,7 @@ import Auth from '../../utils/auth';
 import Signup from "../Signup";
 import SubmitScore from "../../components/SubmitScore";
 import { QUERY_GAME } from '../../utils/queries';
+import CafeState from "../Cafe";
 
 
 function Game() {
@@ -57,14 +58,14 @@ function Game() {
     <div>
       {Auth.loggedIn() ? (
         <>
-      <Nav />
+      <Nav cafe={cafe}/>
       <div className="game-space">
         <div className="layout">
           <h1 className="cafe-title">Cafe Clicker</h1>
           <ClickCounter count={count} handleClick={handleClick} />
           <div className="power-title">Power Ups</div>
           <div className="powerups">
-            <button className="power-btn">AutoClicker</button>
+            <button className="power-btn" onClick={handleCafe}>AutoClicker</button>
             <button className="power-btn">MultiClicker</button>
             <button className="power-btn">Passive Clicker</button>
           </div>
@@ -81,6 +82,9 @@ function Game() {
 
           </div>
 
+      <div>
+        <CafeState cafe={cafe}/>
+      </div>
         </div>
       </div>
       </>) : (
