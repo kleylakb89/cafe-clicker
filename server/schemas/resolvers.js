@@ -39,8 +39,8 @@ const resolvers = {
             const token = signToken(profile);
             return { token, profile };
         },
-        createGame: async (parent, args) => {
-            const game = await Game.create(args);
+        createGame: async (parent, args, {user}) => {
+            const game = await Game.create({...args, user: user.username});
             return game;
         },
         updateGame: async (parent, { _id, clicks, autoClicker, multiClicker, passiveClicker, cafeState }) => {

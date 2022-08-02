@@ -24,14 +24,14 @@ export const LOGIN_USER = gql`
   }
 `;
 export const CREATE_GAME = gql`
-  mutation createGame($user: String!, $clicks: Int!, $autoClicker: Boolean!, $multiClicker: Boolean!, $passiveClicker: Boolean!, $cafeState: Int!) {
-    createGame(user: $user, clicks: $clicks, autoClicker: $autoClicker, multiClicker: $multiClicker, passiveClicker: $passiveClicker, cafeState: $cafeState) {
-      user
+  mutation createGame($clicks: Int!, $autoClicker: Boolean!, $multiClicker: Boolean!, $passiveClicker: Boolean!, $cafeState: Int!) {
+    createGame(clicks: $clicks, autoClicker: $autoClicker, multiClicker: $multiClicker, passiveClicker: $passiveClicker, cafeState: $cafeState) {
       clicks
       autoClicker
       multiClicker
       passiveClicker
-      cafeState 
+      cafeState
+      user
     }
   }
 `;
