@@ -8,6 +8,7 @@ import PassiveClicker from '../../components/PassiveClicker';
 import SaveGame from "../../components/SaveGame";
 import Auth from '../../utils/auth';
 import Signup from "../Signup";
+import SubmitScore from "../../components/SubmitScore";
 
 
 function Game() {
@@ -53,7 +54,7 @@ function Game() {
           </div>
           <div className="game-funcs">
             <SaveGame count={count} auto={auto} multi={multi} passive={passive} cafe={cafe}/>
-            <button className="game-btn">Submit Score</button>
+            <SubmitScore score={count}/>
           </div>
 
           <h2 className="how-title">Instructions:</h2>

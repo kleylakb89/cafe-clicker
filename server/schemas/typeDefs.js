@@ -61,7 +61,6 @@ const typeDefs = gql`
         ): Game
         createScore(
             score: Int!,
-            username: String!,
         ): Score
         updateScore(
             _id: String!,

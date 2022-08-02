@@ -55,8 +55,8 @@ export const DELETE_GAME = gql`
   }
 `;
 export const CREATE_SCORE = gql`
-  mutation createScore($score: Int!, $user: String!){
-    createScore(score: $score, user: $user) {
+  mutation createScore($score: Int!){
+    createScore(score: $score) {
       score
       user  
     }
