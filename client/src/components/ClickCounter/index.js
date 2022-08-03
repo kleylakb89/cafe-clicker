@@ -42,11 +42,13 @@ export default function ClickCounter({ count, handleClick }) {
 
   return (
     <>
+    <div className='powerside'>
+      <div className="counter">Click Count:</div>
+      <div className="num-of-clicks">{count}</div>
+      </div>
       <div className="toast">
         <div><img src={avocado} alt="Avocado Toast" className="avac-img" onClick={changeToast} /></div>
       </div>
-      <div className="counter">Click Count:</div>
-      <div className="num-of-clicks">{count}</div>
     </>
   );
 }
