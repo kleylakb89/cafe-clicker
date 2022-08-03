@@ -86,8 +86,9 @@ function Game() {
     <div>
       {Auth.loggedIn() ? (
         <>
-          <Nav cafe={cafe} />
-          <div className="game-space">
+          <Nav />
+
+          <div className="">
             <div className="layout">
               <h1 className="cafe-title">Cafe Clicker</h1>
               <ClickCounter count={count} handleClick={handleClick} />
@@ -100,38 +101,40 @@ function Game() {
                 </div>
               </div>
               <div className="gameside">
-              <div className="game-funcs">
-                <SaveGame
-                  count={count}
-                  auto={auto}
-                  multi={multi}
-                  passive={passive}
-                  cafe={cafe}
-                />
-                <button className="load-game" onClick={loadGame}>
-                  Load Game
-                </button>
-                <button className="load-game" onClick={deleteGame}>
-                  New Game
-                </button>
-                <SubmitScore score={count} />
-              </div>
+                <div className="game-funcs">
+                  <SaveGame
+                    count={count}
+                    auto={auto}
+                    multi={multi}
+                    passive={passive}
+                    cafe={cafe}
+                  />
+                  <button className="load-game" onClick={loadGame}>
+                    Load Game
+                  </button>
+                  <button className="load-game" onClick={deleteGame}>
+                    New Game
+                  </button>
+                  <SubmitScore score={count} />
+                </div>
 
-              <h2 className="how-title">Instructions:</h2>
-              <div className="instructions">
-                <p className="how-play">
-                  Click the avocado toast as many times as your fingers will
-                  allow! As the week goes by, and the clicks add up, you will
-                  receive power ups to help you gain more clicks. To begin,
-                  simply click the avocado toast and keep on clicking
-                </p>
-
+                <h2 className="how-title">Instructions:</h2>
+                <div className="instructions">
+                  <p className="how-play">
+                    Click the avocado toast as many times as your fingers will
+                    allow! As the week goes by, and the clicks add up, you will
+                    receive power ups to help you gain more clicks. To begin,
+                    simply click the avocado toast and keep on clicking
+                  </p>
                 </div>
               </div>
             </div>
+            <div className="caf-head">
+              <div className="welcome">Welcome To Your Cafe</div>
+            </div>
             <div className="cafe-container">
-                <CafeState cafe={cafe} />
-                </div>
+              <CafeState cafe={cafe} />
+            </div>
           </div>
         </>
       ) : (
