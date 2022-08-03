@@ -32,9 +32,15 @@ function Game() {
       setPassive(data.game.passiveClicker);
       setCafe(data.game.cafeState);
     }
-  }
+  };
 
-  
+  const deleteGame = () => {
+    setCount(0);
+    setAuto(false);
+    setMulti(false);
+    setPassive(false);
+    setCafe(0)
+};
   
   const handleCafe = () => {
     if (cafe < 6) {
@@ -102,6 +108,7 @@ function Game() {
           <div className="game-funcs">
             <SaveGame count={count} auto={auto} multi={multi} passive={passive} cafe={cafe}/>
             <button className="load-game" onClick={loadGame}>Load Game</button>
+            <button className="load-game" onClick={deleteGame}>New Game</button>
             <SubmitScore score={count}/>
           </div>
 
