@@ -11,7 +11,7 @@ const resolvers = {
             return await Score.find();
         },
         game: async (parent, args, {user}) => {
-            return await Game.findOne({ user: user.user });
+            return await Game.findOne({ user: user.username });
         },
         user: async (parent, { _id }) => {
             return await User.findById(_id);
