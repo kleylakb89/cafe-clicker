@@ -33,10 +33,44 @@ function Game() {
   // if (data) {
   //   setCount(data.clicks);
   // }
-
-
+  
+  
+  const handleCafe = () => {
+    if (cafe < 6) {
+      setCafe((cafe + 1));
+    }
+  };
   const handleClick = () => {
     setCount((count + 1));
+    if (count === 5) {
+      handleCafe();
+      alert("cafe updated!")
+    }
+    if (count === 10) {
+      handleCafe();
+      alert("cafe updated!")
+
+    }
+    if (count === 15) {
+      handleCafe();
+      alert("cafe updated!")
+
+    }
+    if (count === 20) {
+      handleCafe();
+      alert("cafe updated!")
+
+    }
+    if (count === 25) {
+      handleCafe();
+      alert("cafe updated!")
+
+    }
+    if (count === 30) {
+      handleCafe();
+      alert("cafe updated!")
+
+    }
   };
   const handleAuto = () => {
     setAuto(true);
@@ -46,11 +80,6 @@ function Game() {
   };
   const handlePassive = () => {
     setPassive(true);
-  };
-  const handleCafe = () => {
-    if (cafe < 6) {
-      setCafe((cafe + 1));
-    }
   };
 
 
@@ -65,7 +94,7 @@ function Game() {
           <ClickCounter count={count} handleClick={handleClick} />
           <div className="power-title">Power Ups</div>
           <div className="powerups">
-            <button className="power-btn" onClick={handleCafe}>AutoClicker</button>
+            <button className="power-btn">AutoClicker</button>
             <button className="power-btn">MultiClicker</button>
             <button className="power-btn">Passive Clicker</button>
           </div>
