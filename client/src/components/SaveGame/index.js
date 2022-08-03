@@ -7,10 +7,11 @@ export default function SaveGame({count, auto, multi, passive, cafe}) {
     const {loading, data} = useQuery(QUERY_GAME);
     const [createGame] = useMutation(CREATE_GAME);
     const [updateGame] = useMutation(UPDATE_GAME);
+    console.log(data);
 
     const handleSave = async (event) => {
         event.preventDefault();
-        if (!data) {
+        if (!data.game) {
             try {
                 const data = await createGame({
                     variables: {
