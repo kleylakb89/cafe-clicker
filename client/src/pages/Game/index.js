@@ -22,17 +22,18 @@ function Game() {
   let [passive, setPassive] = useState(false);
   let [cafe, setCafe] = useState(0);
   
-  // let condition=false;
-  // const handleCondition = () => {
-  //   condition=true;
-  //   return condition;
-  // }
-  // const {loading, data} = useQuery(QUERY_GAME, {enabled:condition});
-  // console.log(data);
+  const {loading, data} = useQuery(QUERY_GAME);
 
-  // if (data) {
-  //   setCount(data.clicks);
-  // }
+  const loadGame = () => {
+    if (data.game) {
+      setCount(data.game.clicks);
+      setAuto(data.game.autoClicker);
+      setMulti(data.game.multiClicker);
+      setPassive(data.game.passiveClicker);
+      setCafe(data.game.cafeState);
+    }
+  }
+
   
   
   const handleCafe = () => {
@@ -100,7 +101,7 @@ function Game() {
           </div>
           <div className="game-funcs">
             <SaveGame count={count} auto={auto} multi={multi} passive={passive} cafe={cafe}/>
-            <button className="load-game">Load A Game</button>
+            <button className="load-game" onClick={loadGame}>Load Game</button>
             <SubmitScore score={count}/>
           </div>
 
