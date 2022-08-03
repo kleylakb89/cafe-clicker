@@ -1,21 +1,19 @@
 import React, { useState } from "react";
-import { useQuery } from '@apollo/client';
+import { useQuery } from "@apollo/client";
 import "./style.css";
 import Nav from "../../components/Nav/index";
-import ClickCounter from '../../components/ClickCounter';
-import AutoClicker from '../../components/AutoClicker';
-import MultiClicker from '../../components/MultiClicker';
-import PassiveClicker from '../../components/PassiveClicker';
+import ClickCounter from "../../components/ClickCounter";
+import AutoClicker from "../../components/AutoClicker";
+import MultiClicker from "../../components/MultiClicker";
+import PassiveClicker from "../../components/PassiveClicker";
 import SaveGame from "../../components/SaveGame";
-import Auth from '../../utils/auth';
+import Auth from "../../utils/auth";
 import Signup from "../Signup";
 import SubmitScore from "../../components/SubmitScore";
-import { QUERY_GAME } from '../../utils/queries';
+import { QUERY_GAME } from "../../utils/queries";
 import CafeState from "../Cafe";
 
-
 function Game() {
-  
   let [count, setCount] = useState(0);
   let [auto, setAuto] = useState(false);
   let [multi, setMulti] = useState(false);
@@ -44,39 +42,34 @@ function Game() {
   
   const handleCafe = () => {
     if (cafe < 6) {
-      setCafe((cafe + 1));
+      setCafe(cafe + 1);
     }
   };
   const handleClick = () => {
-    setCount((count + 1));
+    setCount(count + 1);
     if (count === 5) {
       handleCafe();
-      alert("cafe updated!")
+      alert("cafe updated!");
     }
     if (count === 10) {
       handleCafe();
-      alert("cafe updated!")
-
+      alert("cafe updated!");
     }
     if (count === 15) {
       handleCafe();
-      alert("cafe updated!")
-
+      alert("cafe updated!");
     }
     if (count === 20) {
       handleCafe();
-      alert("cafe updated!")
-
+      alert("cafe updated!");
     }
     if (count === 25) {
       handleCafe();
-      alert("cafe updated!")
-
+      alert("cafe updated!");
     }
     if (count === 30) {
       handleCafe();
-      alert("cafe updated!")
-
+      alert("cafe updated!");
     }
   };
   const handleAuto = () => {
@@ -88,7 +81,6 @@ function Game() {
   const handlePassive = () => {
     setPassive(true);
   };
-
 
   return (
     <div>
@@ -117,14 +109,23 @@ function Game() {
             <p className="how-play">Click the avocado toast as many times as your fingers will allow! As the week goes by, and the clicks add up, you will receive power ups to help you gain more clicks.
               To begin, simply click the avocado toast and keep on clicking</p>
 
+                <h2 className="how-title">Instructions:</h2>
+                <div className="instructions">
+                  <p className="how-play">
+                    Click the avocado toast as many times as your fingers will
+                    allow! As the week goes by, and the clicks add up, you will
+                    receive power ups to help you gain more clicks. To begin,
+                    simply click the avocado toast and keep on clicking
+                  </p>
+                </div>
+              </div>
+              <div>
+                <CafeState cafe={cafe} />
+              </div>
+            </div>
           </div>
-
-      <div>
-        <CafeState cafe={cafe}/>
-      </div>
-        </div>
-      </div>
-      </>) : (
+        </>
+      ) : (
         <Signup />
       )}
     </div>

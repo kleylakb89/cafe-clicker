@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Dosis&display=swap");
 
 .layout {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   text-align: center;
@@ -12,17 +12,39 @@
   height: 70vh;
   box-shadow: 15px 15px 10px rgba(122, 73, 102, 0.3);
   background-color: #f9f1cd;
+  z-index: 0;
+}
+.cafe-title {
+  font-family: "Caveat", cursive;
+  font-family: "Dosis", sans-serif;
+  font-size: 80px;
+  color: rgb(251, 239, 214);
+  text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
+  background-color: #14a871;
+  border-bottom: 8px solid rgb(185, 232, 90);
+}
+.powerside{
+  max-width: 55%;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -30%);
 }
 .powerups {
-  position: relative;
-  top: -30vh;
-  margin-top: -5%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  margin-top: 100px;
+  width: 100%;
 }
 
 .power-title {
   position: relative;
-  left: -39%;
-  top: -55%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 40px;
   font-family: "Caveat", cursive;
   font-family: "Dosis", sans-serif;
@@ -41,7 +63,7 @@
   color: white;
   padding: 14px;
   cursor: pointer;
-  width: 20%;
+  width: 100%;
   display: block;
   font-family: "Caveat", cursive;
   font-family: "Dosis", sans-serif;
@@ -52,15 +74,6 @@
   color: black;
 }
 
-.cafe-title {
-  font-family: "Caveat", cursive;
-  font-family: "Dosis", sans-serif;
-  font-size: 80px;
-  color: rgb(251, 239, 214);
-  text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
-  background-color: #14a871;
-  border-bottom: 8px solid rgb(185, 232, 90);
-}
 
 .counter {
   position: relative;
@@ -86,25 +99,34 @@
   color: #14a871;
   text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
 }
-
+.gameside{
+  max-width: 100%;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -30%);
+}
 .instructions {
-  width: 400px;
+  width: 100%;
   color: white;
   position: relative;
   text-align: center;
-  right: -71.5%;
-  top: -775px;
-  
+  top: 2%;
+  left: 40%;
+  transform: translate(-50%, -50%);
   padding: 10px;
 }
 .how-title {
   position: relative;
-  right: -36%;
-  top: -735px;
+  top: -2%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
   font-family: "Caveat", cursive;
   font-family: "Dosis", sans-serif;
   font-weight: 400;
-  font-size: 45px;
+  font-size: 60px;
   color: rgb(36, 8, 58);
   text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
 }
@@ -113,14 +135,15 @@
   font-family: "Caveat", cursive;
   font-family: "Dosis", sans-serif;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 1.5px;
   color: rgb(185, 80, 14);
 }
 .game-funcs {
   position: relative;
-  top: -76vh;
-  right: -1180PX;
+  top: 15%;
+  left: 37%;
+  transform: translate(-50%, -50%);
 }
 
 .game-funcs button {
@@ -132,7 +155,7 @@
   color: white;
   padding: 14px;
   cursor: pointer;
-  width: 20%;
+  width: 100%;
   display: block;
   font-family: "Caveat", cursive;
   font-family: "Dosis", sans-serif;
@@ -142,7 +165,7 @@
   background-color: rgb(185, 232, 90);
   color: black;
 }
-@media screen and (max-width: 1500px) {
+/* @media screen and (max-width: 1500px) {
 
   .counter {
     top: -60%;
@@ -306,4 +329,4 @@
     width: 30%;;
     
   }
-}
+} */
