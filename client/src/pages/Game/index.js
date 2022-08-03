@@ -111,8 +111,9 @@ useEffect(() => {
     <div>
       {Auth.loggedIn() ? (
         <>
-          <Nav cafe={cafe} />
-          <div className="game-space">
+          <Nav />
+
+          <div className="">
             <div className="layout">
               <h1 className="cafe-title">Cafe Clicker</h1>
               <ClickCounter count={count} handleClick={handleClick} />
@@ -141,7 +142,6 @@ useEffect(() => {
                   </button>
                   <SubmitScore score={count} />
                 </div>
-
                 <h2 className="how-title">Instructions:</h2>
                 <div className="instructions">
                   <p className="how-play">
@@ -150,9 +150,11 @@ useEffect(() => {
                     receive power ups to help you gain more clicks. To begin,
                     simply click the avocado toast and keep on clicking
                   </p>
-
                 </div>
               </div>
+            </div>
+            <div className="caf-head">
+              <div className="welcome">Welcome To Your Cafe</div>
             </div>
             <div className="cafe-container">
               <CafeState cafe={cafe} />
