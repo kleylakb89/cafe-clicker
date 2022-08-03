@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import "./style.css";
 import Nav from "../../components/Nav/index";
@@ -46,16 +46,12 @@ function Game() {
     }
   };
   const handleClick = () => {
-    setCount(count + 1);
-    if (count === 5) {
-      handleCafe();
-      alert("cafe updated!");
+    if (multi) {
+      setCount(count + 2);
+    } else {
+      setCount(count + 1);
     }
     if (count === 10) {
-      handleCafe();
-      alert("cafe updated!");
-    }
-    if (count === 15) {
       handleCafe();
       alert("cafe updated!");
     }
@@ -63,21 +59,50 @@ function Game() {
       handleCafe();
       alert("cafe updated!");
     }
-    if (count === 25) {
-      handleCafe();
-      alert("cafe updated!");
-    }
     if (count === 30) {
       handleCafe();
       alert("cafe updated!");
     }
+    if (count === 40) {
+      handleCafe();
+      alert("cafe updated!");
+    }
+    if (count === 50) {
+      handleCafe();
+      alert("cafe updated!");
+    }
+    if (count === 60) {
+      handleCafe();
+      alert("cafe updated!");
+    }
   };
+
+useEffect(() => {
+    let interval;
+    if (auto) {
+      interval = setInterval(() => {
+        setCount(c=>c+1);
+      }, 1000);
+      
+    }
+    return ()=>{
+      clearInterval(interval);
+    }
+  }, [auto]);
+
   const handleAuto = () => {
-    setAuto(true);
+    if (count > 20) {
+      setAuto(true);
+    }
+    
   };
+
   const handleMulti = () => {
-    setMulti(true);
+    if (count > 40) {
+      setMulti(true);
+    }
   };
+
   const handlePassive = () => {
     setPassive(true);
   };
@@ -95,8 +120,8 @@ function Game() {
               <div className="powerside">
                 <div className="power-title">Power Ups</div>
                 <div className="powerups">
-                  <button className="power-btn">AutoClicker</button>
-                  <button className="power-btn">MultiClicker</button>
+                  <button className="power-btn" onClick={handleAuto}>AutoClicker (20)</button>
+                  <button className="power-btn" onClick={handleMulti}>MultiClicker (40)</button>
                   <button className="power-btn">Passive Clicker</button>
                 </div>
               </div>
@@ -117,7 +142,6 @@ function Game() {
                   </button>
                   <SubmitScore score={count} />
                 </div>
-
                 <h2 className="how-title">Instructions:</h2>
                 <div className="instructions">
                   <p className="how-play">
