@@ -1,5 +1,6 @@
 import React, { useState, } from 'react';
-import Avac1 from "../../images/Avac1.png";
+import './style.css';
+import Avac1 from "../../images/Avacado 1.png";
 import Avac2 from "../../images/Avacado 2.png";
 import Avac3 from "../../images/Avacado 3.png";
 import Avac4 from "../../images/Avacado 4.png";
@@ -43,7 +44,7 @@ export default function ClickCounter({ count, handleClick }) {
   return (
     <>
       <div className="toast">
-        <div><img src={avocado} alt="Avocado" width="700px" className="avac-img" onClick={changeToast} /></div>
+        <div><img src={avocado} alt="Avocado Toast" className="avac-img" onClick={changeToast} /></div>
       </div>
       <div className="counter">Click Count:</div>
       <div className="num-of-clicks">{count}</div>
