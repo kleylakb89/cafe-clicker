@@ -80,7 +80,6 @@
   top: 1%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
   font-family: "Caveat", cursive;
   font-family: "Dosis", sans-serif;
   font-weight: 400;
@@ -91,7 +90,6 @@
 .num-of-clicks {
   margin-top: 15px;
   transform: translate(-0%, -50%);
-  font-size: 40px;
   font-family: "Caveat", cursive;
   font-family: "Dosis", sans-serif;
   font-weight: 700;
@@ -122,7 +120,6 @@
   top: -8%;
   left: 40%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
   font-family: "Caveat", cursive;
   font-family: "Dosis", sans-serif;
   font-weight: 400;
@@ -190,66 +187,54 @@
   
  
 }
-/* @media screen and (max-width: 1500px) {
-
-  .counter {
-    top: -60%;
-    font-size: 30px;
+@media screen and (max-width: 1700px) {
+  .powerside{
+   
+    top: 55%;
+    left: 10%;
+    transform: translate(-50%, -30%);
   }
-  .num-of-clicks {
-    top: -57%;
+  .counter {
     font-size: 50px;
   }
+  .num-of-clicks {
+    font-size: 70px;
+  }
   .power-title {
-    top: -53%;
-    font-size: 30px;
+    font-size: 50px;
     
   }
   
   .powerups button {
     background-color: #04aa6d;
     border: 1px solid green;
-    margin: 8px;
-    margin-left: 10px;
     font-size: 18px;
     padding: 5px;
   }
   .powerups {
-    position: relative;
-    top: -29vh;
-    margin-top: -5%;
+    margin-top: 50px;
   }
+  
   .avac-img{
-    width: 550px;
-    margin-top: -45px;
+    width: 400px;
+    
   }
   .instructions {
-    right: -63.5%;
-    top: -517px;
-    padding: 10px;
-    width: 350px;
+    width: 150%;
+    top: 25%;
+   
   }
   .how-title {
-    position: relative;
-    right: -33%;
-    top: -480px;
-    font-size: 35px;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
    
   }
   .how-play {
-   
-    font-family: "Caveat", cursive;
-    font-family: "Dosis", sans-serif;
-    font-weight: 600;
     font-size: 14px;
     letter-spacing: 1.5px;
-    color: rgb(185, 80, 14);
   }
-  .game-funcs {
-    position: relative;
-    top: -70vh;
-    right: -780PX;
-  }
+  
   
   .game-funcs button {
     background-color: #04aa6d;
@@ -259,10 +244,296 @@
     font-size: 18px;
     color: white;
     padding: 5px;
-    
+  }
+  .gameside{
+    left: 88%;
   }
 }
-@media screen and (max-width: 415px) {
+
+@media screen and (max-width: 1350px) {
+  .powerside{
+    top: 55%;
+    left: 12%;
+    transform: translate(-50%, -30%);
+  }
+ 
+  .num-of-clicks {
+    font-size: 70px;
+
+  }
+  .power-title {
+    font-size: 50px;
+    
+  }
+  
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .powerups {
+    margin-top: 50px;
+  }
+  
+  .avac-img{
+    width: 400px;
+    
+  }
+  .instructions {
+    width: 150%;
+    top: 25%;
+   
+  }
+  .how-title {
+    top: 25%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+   
+  }
+  .how-play {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-right: 20px;
+  }
+  
+  
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 8px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+    padding: 5px;
+  }
+  .gameside{
+    left: 88%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .powerside{
+    top: 55%;
+    left: 15%;
+    transform: translate(-50%, -30%);
+  }
+
+  .num-of-clicks {
+    font-size: 75px;
+
+  }
+  .counter{
+    font-size: 40px;
+  }
+  .power-title {
+    font-size: 40px;
+    
+  }
+  
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .powerups {
+    margin-top: 50px;
+  }
+  
+  .avac-img{
+    width: 300px;
+    
+  }
+  .instructions {
+    width: 150%;
+    top: 25%;
+   
+  }
+  .how-title {
+    top: 25%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+   
+  }
+  .how-play {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-right: 20px;
+  }
+  
+  
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 8px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+    padding: 5px;
+  }
+  .gameside{
+    left: 85%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .powerside{
+    top: 55%;
+    left: 15%;
+    transform: translate(-50%, -30%);
+  }
+
+  .num-of-clicks {
+    font-size: 75px;
+
+  }
+  .counter{
+    font-size: 40px;
+  }
+  .power-title {
+    font-size: 40px;
+    
+  }
+  
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .powerups {
+    margin-top: 50px;
+  }
+  
+  .avac-img{
+    width: 200px;
+    
+  }
+  .instructions {
+    width: 150%;
+    top: 25%;
+   
+  }
+  .how-title {
+    top: 25%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+   
+  }
+  .how-play {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-right: 30px;
+  }
+  
+  
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 8px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+    padding: 5px;
+  }
+  .gameside{
+    left: 85%;
+  }
+}
+@media screen and (max-height: 895px) {
+ 
+  .instructions {
+    width: 150%;
+    top: 10%;
+   
+  }
+  .how-title {
+    top: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+   
+  }
+
+}
+@media screen and (max-height: 790px) {
+  .powerside{
+    top: 60%;
+    transform: translate(-50%, -30%);
+  }
+
+  .counter{
+    font-size: 35px;
+  }
+
+  .power-title {
+    font-size: 40px;
+    
+  }
+  .instructions {
+    width: 150%;
+    top: 10%;
+   
+  }
+  .how-title {
+    top: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+  }
+  .avac-img{
+    width: 300px;
+    
+  }
+  .game-funcs {
+    top: 25%;
+  }
+
+}
+@media screen and (max-height: 741px) {
+  .powerside{
+    top: 60%;
+    transform: translate(-50%, -30%);
+  }
+
+  .counter{
+    font-size: 35px;
+  }
+
+  .power-title {
+    font-size: 40px;
+    
+  }
+  .powerups {
+    margin-top: 30px;
+  }
+  .power-title{
+    top: 35%;
+  }
+  .instructions {
+    width: 150%;
+    top: 2%;
+   
+  }
+  .how-title {
+    top: 8%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+  }
+  .avac-img{
+    width: 300px;
+    
+  }
+  .game-funcs {
+    top: 30%;
+  }
+  .how-play {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+}
+/* @media screen and (max-width: 415px) {
   .layout {
     width: 100%;
   }
