@@ -10,7 +10,7 @@ export default function SaveGame({count, auto, multi, passive, cafe}) {
 
     const handleSave = async (event) => {
         event.preventDefault();
-        if (!data) {
+        if (!data.game) {
             try {
                 const data = await createGame({
                     variables: {

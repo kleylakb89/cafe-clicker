@@ -19,19 +19,27 @@ function Game() {
   let [multi, setMulti] = useState(false);
   let [passive, setPassive] = useState(false);
   let [cafe, setCafe] = useState(0);
+  
+  const {loading, data} = useQuery(QUERY_GAME);
 
-  // let condition=false;
-  // const handleCondition = () => {
-  //   condition=true;
-  //   return condition;
-  // }
-  // const {loading, data} = useQuery(QUERY_GAME, {enabled:condition});
-  // console.log(data);
+  const loadGame = () => {
+    if (data.game) {
+      setCount(data.game.clicks);
+      setAuto(data.game.autoClicker);
+      setMulti(data.game.multiClicker);
+      setPassive(data.game.passiveClicker);
+      setCafe(data.game.cafeState);
+    }
+  };
 
-  // if (data) {
-  //   setCount(data.clicks);
-  // }
-
+  const deleteGame = () => {
+    setCount(0);
+    setAuto(false);
+    setMulti(false);
+    setPassive(false);
+    setCafe(0)
+};
+  
   const handleCafe = () => {
     if (cafe < 6) {
       setCafe(cafe + 1);
@@ -78,31 +86,28 @@ function Game() {
     <div>
       {Auth.loggedIn() ? (
         <>
-          <Nav cafe={cafe} />
-          <div className="game-space">
-            <div className="layout">
-              <h1 className="cafe-title">Cafe Clicker</h1>
-              <ClickCounter count={count} handleClick={handleClick} />
-              <div className="powerside">
-                <h2 className="power-title">Power Ups</h2>
-                <div className="powerups">
-                  <button className="power-btn">AutoClicker</button>
-                  <button className="power-btn">MultiClicker</button>
-                  <button className="power-btn">Passive Clicker</button>
-                </div>
-              </div>
-              <div className="gameside">
-                <div className="game-funcs">
-                  <SaveGame
-                    count={count}
-                    auto={auto}
-                    multi={multi}
-                    passive={passive}
-                    cafe={cafe}
-                  />
-                  <button className="load-game">Load A Game</button>
-                  <SubmitScore score={count} />
-                </div>
+      <Nav cafe={cafe}/>
+      <div className="game-space">
+        <div className="layout">
+          <h1 className="cafe-title">Cafe Clicker</h1>
+          <ClickCounter count={count} handleClick={handleClick} />
+          <div className="power-title">Power Ups</div>
+          <div className="powerups">
+            <button className="power-btn">AutoClicker</button>
+            <button className="power-btn">MultiClicker</button>
+            <button className="power-btn">Passive Clicker</button>
+          </div>
+          <div className="game-funcs">
+            <SaveGame count={count} auto={auto} multi={multi} passive={passive} cafe={cafe}/>
+            <button className="load-game" onClick={loadGame}>Load Game</button>
+            <button className="load-game" onClick={deleteGame}>New Game</button>
+            <SubmitScore score={count}/>
+          </div>
+
+          <h2 className="how-title">Instructions:</h2>
+          <div className="instructions">
+            <p className="how-play">Click the avocado toast as many times as your fingers will allow! As the week goes by, and the clicks add up, you will receive power ups to help you gain more clicks.
+              To begin, simply click the avocado toast and keep on clicking</p>
 
                 <h2 className="how-title">Instructions:</h2>
                 <div className="instructions">

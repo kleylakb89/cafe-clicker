@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useQuery } from '@apollo/client';
 import "./style.css";
 import Nav from "../../components/Nav/index";

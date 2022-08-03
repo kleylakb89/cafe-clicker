@@ -10,6 +10,12 @@ const ScoresList = ({scores}) => {
     return b.score - a.score;
   });
 
+  if (arr.length > 10) {
+    while (arr.length > 10) {
+      arr.pop();
+    }
+  }
+
 
   return (
     <ol>
