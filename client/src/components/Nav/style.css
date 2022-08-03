@@ -1,22 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Dosis&display=swap");
 
-.flex-container {
+
+.navbar{
+  width: 90%;
+  background: transparent;
+  color: rgb(36, 8, 58);
+  z-index: 100;
   display: flex;
   justify-content: end;
-  top: 0;
+  margin-top: 25px;}
+
+.navbar-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.flex-container > div {
-  background-color: transparent;
-  width: 200px;
-  margin-top: 10px;
-  text-align: center;
-  line-height: 75px;
+.menu-items{
+  order: 2;
+  display: flex;
+}
+
+
+.menu-items li{
+  list-style: none;
+  margin-left: 3.5rem;
+}
+
+.navbar a{
   font-size: 30px;
   text-decoration: none;
   font-family: "Caveat", cursive;
   font-family: "Dosis", sans-serif;
+}
+
+.navbar a:hover{
+  color: #04aa6d;
 }
 a:link {
   font-size: 35px;
@@ -39,3 +59,7 @@ a:active {
   text-decoration: none;
 
 }
+
+
+
+

@@ -20,7 +20,7 @@ const ScoresList = ({scores}) => {
   return (
     <ol>
       {arr.map((score) => (
-        <li key={score._id}>{score.score}: {score.user}</li>
+        <li key={score._id}><span className="score-color">{score.score}</span>:  {score.user}</li>
       ))}
     </ol>
   )

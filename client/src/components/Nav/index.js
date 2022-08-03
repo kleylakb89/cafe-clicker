@@ -1,36 +1,25 @@
 import React from "react";
 import "./style.css";
 import Auth from '../../utils/auth';
-import CafeState from '../../pages/Cafe/index';
+import spatula from '../../images/spatula.png'
 
 
-function Nav({cafe}) {
+function Nav() {
   const signout = () => {
     Auth.logout();
   }
   return (
-    <div className="flex-container">
-      <div>
-        <a className="tile" href="/">
-          Home
-        </a>
-      </div>
-      <div>
-        <a className="tile" href="/login" onClick={signout}>
-          Logout
-        </a>
-      </div>
-      <div>
-        <a className="tile" href="/leaderboard">
-          Leader Board
-        </a>
-      </div>
-      {/* <div>
-        <a className="tile" href="/cafe">
-          <CafeState cafe={cafe} />
-        </a>
-      </div> */}
+    <nav class="navbar">
+    <div class="navbar-container">
+        <ul class="menu-items">
+            <li><a href="/">Home</a></li>
+            <li><a  href="/login" onClick={signout}>Logout</a></li>
+            <li><a href="/leaderboard">Leader Board</a></li>
+        </ul>
+        <img src={spatula }class="logo" width="100" ></img>
     </div>
+</nav>
+    
   );
 }
 

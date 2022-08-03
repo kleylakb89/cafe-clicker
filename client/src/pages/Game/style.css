@@ -165,12 +165,30 @@
   background-color: rgb(185, 232, 90);
   color: black;
 }
+.caf-head{
+  width: 100%;
+  height: 20vh;
+  background: linear-gradient(to bottom, #7fc68c, #d2ad50, #f7e5cd);
+  text-align: center;
+  transform: translate(0%, 400%);
+
+}
+.welcome{
+  font-family: "Caveat", cursive;
+  font-family: "Dosis", sans-serif;
+  font-size: 80px;
+  text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  color: #f9f1cd;
+}
 .cafe-container{
-  position: relative;
-  top: 100%;
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 100%);
-  border: 40px solid #f9f1cd;
+  transform: translate(-50%, 85%);
+  border:8px solid #f9f1cd;
+  
+ 
 }
 /* @media screen and (max-width: 1500px) {
 

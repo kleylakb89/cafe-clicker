@@ -10,15 +10,17 @@ function Leaderboard() {
   const scores = data?.scores || [];
 
   return (
-    <div>
+    <>
       <Nav />
       <div className="game-space">
         <div className="layout">
           <h1 className="cafe-title">Leader Board</h1>
+          <div className="score-list">
           <ScoresList scores={scores} />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
