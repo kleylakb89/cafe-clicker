@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from '@apollo/client';
 import "./style.css";
-import Nav from "../../components/Nav/index";
+import Nav from "../../components/Nav"
 import { QUERY_SCORES } from '../../utils/queries';
 import ScoresList from '../../components/ScoresList';
 
