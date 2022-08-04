@@ -23,6 +23,26 @@
   background-color: #14a871;
   border-bottom: 8px solid rgb(185, 232, 90);
 }
+
+.see-cafe {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-cafe {
+  display: none;
+}
+
+.status-text {
+  margin-top: -3%;
+  font-family: "Dosis", sans-serif;
+}
+
 .powerside {
   max-width: 55%;
   height: 50vh;
@@ -180,12 +200,12 @@
   background-color: #f9f1cd;
   padding: 30px;
 }
-.cafe-container {
+/* .cafe-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 85%);
-}
+} */
 .cafe-img {
   border: 8px solid #f9f1cd;
 }

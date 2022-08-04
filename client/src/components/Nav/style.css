@@ -22,20 +22,19 @@
   display: flex;
 }
 
-
 .menu-items li{
   list-style: none;
   margin-left: 3.5rem;
 }
 
-.navbar a{
+.navbar a {
   font-size: 30px;
   text-decoration: none;
   font-family: "Caveat", cursive;
   font-family: "Dosis", sans-serif;
 }
 
-.navbar a:hover{
+.navbar a:hover {
   color: #04aa6d;
 }
 

@@ -18,14 +18,15 @@ function Game() {
   let [passive, setPassive] = useState(false);
   let [cafe, setCafe] = useState(0);
   let [status, setStatus] = useState('');
-  
+  let [check, setCheck] = useState(false);
+
   // using lazy query to call within function
   const [queryGame] = useLazyQuery(QUERY_GAME);
 
   // queries latest saved game and sets the variables to the state from the saved game
   const loadGame = async () => {
-    const data = await queryGame({variables:{time:new Date()}});
-    const {game} = data.data;
+    const data = await queryGame({ variables: { time: new Date() } });
+    const { game } = data.data;
     if (game) {
       setCount(game.clicks);
       setAuto(game.autoClicker);
@@ -43,7 +44,7 @@ function Game() {
     setMulti(false);
     setPassive(false);
     setCafe(0);
-    setStatus('New game created! Hit save game to overwrite or load game to retrieve previous game.');
+    setStatus('Load old game or Save over it');
   };
 
   // increments cafe
@@ -58,7 +59,7 @@ function Game() {
     // if multi power up is active, clicks are doubled
     if (multi) {
       setCount(count + 2);
-    // otherwise one click increases count by one
+      // otherwise one click increases count by one
     } else {
       setCount(count + 1);
     }
@@ -88,20 +89,21 @@ function Game() {
       handleCafe();
       alert("Cafe Updated!");
     }
+    setStatus('');
   };
 
   // setting up an interval for the autoclicker power up
-useEffect(() => {
+  useEffect(() => {
     let interval;
     // every second the autoclicker adds one click
     if (auto) {
       interval = setInterval(() => {
-        setCount(c=>c+1);
+        setCount(c => c + 1);
       }, 1000);
-      
+
     }
     // leaving the page clears the interval
-    return ()=>{
+    return () => {
       clearInterval(interval);
     }
   }, [auto]);
@@ -111,13 +113,21 @@ useEffect(() => {
     if (count > 20) {
       setAuto(true);
     }
-    
+
   };
 
   // when user passes 40 clicks, they can choose to active the multiclicker
   const handleMulti = () => {
     if (count > 40) {
       setMulti(true);
+    }
+  };
+
+  const handleView = () => {
+    if (!check) {
+      setCheck(true);
+    } else {
+      setCheck(false);
     }
   };
 
@@ -130,12 +140,16 @@ useEffect(() => {
     <div>
       {Auth.loggedIn() ? (
         <>
-          <Nav />
+          <Nav handleView={handleView} />
 
           <div className="">
             <div className="layout">
-              <h4 className="status-text">{status}</h4>
-              <h1 className="cafe-title">Cafe Clicker</h1>
+                <div className={`cafe-container ${check ? 'see-cafe' : 'no-cafe'}`} id="view-cafe">
+                  <CafeState cafe={cafe} />
+                </div>
+              <h1 className="cafe-title">
+                {`${status === '' ? 'Cafe Clicker' : status}`
+              }</h1>
               <ClickCounter count={count} handleClick={handleClick} />
               <div className="powerside">
                 <div className="power-title">Power Ups</div>
@@ -162,7 +176,7 @@ useEffect(() => {
                     New Game
                   </button>
                   <SubmitScore score={count}
-                  setStatus={setStatus} />
+                    setStatus={setStatus} />
                 </div>
                 <h2 className="how-title">Instructions:</h2>
                 <div className="instructions">
@@ -173,9 +187,6 @@ useEffect(() => {
                     simply click the avocado toast and keep on clicking
                   </p>
                 </div>
-            <div className="cafe-container" id="view-cafe">
-              <CafeState cafe={cafe} />
-            </div>
               </div>
             </div>
             {/* <div className="caf-head">
