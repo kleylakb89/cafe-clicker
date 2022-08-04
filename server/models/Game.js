@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-
+//this is our game schema, every object associated with gameSchema and all of their data types
 const gameSchema = new Schema({
   user: {
     type: String,
@@ -29,7 +29,7 @@ const gameSchema = new Schema({
     required: true,
   }
 });
-
+//setting our gameSchema to a model and setting that model to a constant
 const Game = model('Game', gameSchema);
-
+//exporting our game model
 module.exports = Game;
