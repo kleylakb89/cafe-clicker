@@ -107,9 +107,9 @@ useEffect(() => {
     }
   };
 
-  const handlePassive = () => {
-    setPassive(true);
-  };
+  // const handlePassive = () => {
+  //   setPassive(true);
+  // };
 //console.log(count)
   return (
     <div>
@@ -127,7 +127,7 @@ useEffect(() => {
                 <div className="powerups">
                   <button className="power-btn" onClick={handleAuto}>AutoClicker (20)</button>
                   <button className="power-btn" onClick={handleMulti}>MultiClicker (40)</button>
-                  <button className="power-btn">Passive Clicker</button>
+                  {/* <button className="power-btn">Passive Clicker</button> */}
                 </div>
               </div>
               <div className="gameside">

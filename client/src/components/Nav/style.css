@@ -38,6 +38,11 @@
 .navbar a:hover{
   color: #04aa6d;
 }
+
+a {
+  color: rgb(24, 17, 60);
+}
+
 a:link {
   font-size: 35px;
   text-decoration: none;
@@ -60,6 +65,24 @@ a:active {
 
 }
 
+@media screen and (max-width: 780px) {
+  .navbar {
+    display: block;
+    width: 70%;
+  }
+}
 
+@media screen and (max-width: 730px) {
+  .logo {
+    display: none;
+  }
+}
 
-
+@media screen and (max-width: 620px) {
+  /* .menu-items {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 100;
+  } */
+}
