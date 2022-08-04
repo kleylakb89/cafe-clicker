@@ -11,6 +11,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from "./pages/Signup";
 import Game from "./pages/Game";
 import Leaderboard from './pages/Leaderboard';
+import ReactAudioPlayer from 'react-audio-player';
+import song from './sounds/happy-journey-full.wav'
 
 // using graphql
 const httpLink = createHttpLink({
@@ -39,6 +41,13 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="container">
+        <ReactAudioPlayer
+          className={'player'}
+          src={song}
+          loop={true}
+          autoPlay={true}
+          volume={.1}
+        />
         <Router>
           <Routes>
             <Route
