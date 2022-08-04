@@ -21,7 +21,7 @@ const ScoresList = ({scores}) => {
 
 
   return (
-    <ol>
+    <ol className='o-list'>
       {arr.map((score) => (
         <li key={score._id}><span className="score-color">{score.score}</span>:  {score.user}</li>
       ))}

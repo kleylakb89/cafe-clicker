@@ -65,24 +65,50 @@ a:active {
 
 }
 
-@media screen and (max-width: 780px) {
-  .navbar {
-    display: block;
-    width: 70%;
+@media screen and (max-width: 1700px) and (max-height:820px) {
+  .navbar{
+    width: 90%;
+    margin-top: 15px;}
+  
+  .navbar a{
+    font-size: 30px;
+}
+  .logo{
+    width: 60px;
   }
 }
-
-@media screen and (max-width: 730px) {
-  .logo {
-    display: none;
+@media screen and (max-width: 955px) {
+  .navbar{
+    width: 90%;
+    margin-top: 18px;}
+  
+  .navbar a{
+    font-size: 25px;
+}
+  .logo{
+    width: 60px;
   }
 }
+@media screen and (max-width: 760px) {
+  .navbar{
+    width: 90%;
+    margin-top: 18px;}
+  
+  .navbar a{
+    font-size: 22px;
+}
+  .logo{
+    width: 60px;
+  }
+  .menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+  }
+}
+@media screen and (max-height: 480px) {
+  .navbar{
+    width: 90%;
+    margin-top: 2px;}
+  
 
-@media screen and (max-width: 620px) {
-  /* .menu-items {
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    z-index: 100;
-  } */
 }

@@ -19,7 +19,14 @@
   font-family: "Caveat", cursive;
   font-family: "Dosis", sans-serif;
 }
+.o-list li{
+  margin-top: 40px;
+  padding: 10px;
+  display: inline-block;
+
+}
   ol {
+
   list-style-type: none;
 }
 .score-color{
