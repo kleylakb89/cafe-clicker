@@ -11,6 +11,7 @@ const resolvers = {
             return await Score.find();
         },
         game: async (parent, args, {user}) => {
+            console.log(user)
             return await Game.findOne({ user: user.username });
         },
         user: async (parent, { _id }) => {
@@ -44,6 +45,7 @@ const resolvers = {
             return game;
         },
         updateGame: async (parent, { clicks, autoClicker, multiClicker, passiveClicker, cafeState }, {user}) => {
+            console.log({clicks, autoClicker, multiClicker, passiveClicker, cafeState});
             const game = await Game.findOneAndUpdate(
                 { user: user.username },
                 {

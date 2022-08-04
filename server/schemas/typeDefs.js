@@ -31,7 +31,7 @@ const typeDefs = gql`
     type Query {
         score(user: String): Score
         scores: [Score]
-        game(user: String): Game
+        game(user: String, time: String): Game
         user(_id: ID!): User
     }
 

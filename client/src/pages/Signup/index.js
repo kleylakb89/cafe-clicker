@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
 import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
 import { CREATE_USER } from '../../utils/mutations';
 import Login from '../../components/Login';
 
@@ -44,8 +43,7 @@ function Signup() {
         <div className="signup">
           {data ? (
             <p>
-              Success! You may now head{' '}
-              <Link to="/">back to the homepage.</Link>
+              Success!
             </p>
           ) : (
             <form onSubmit={handleFormSubmit}>

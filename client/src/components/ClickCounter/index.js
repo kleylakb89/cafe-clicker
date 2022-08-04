@@ -39,7 +39,6 @@ export default function ClickCounter({ count, handleClick }) {
         break;
     }
   }
-
   return (
     <>
     <div className='powerside'>

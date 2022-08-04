@@ -19,8 +19,8 @@ export const QUERY_SCORES = gql`
   }
 `;
 export const QUERY_GAME = gql`
-  query game {
-    game {
+  query game($time: String) {
+    game(time: $time) {
       _id
       user
       clicks

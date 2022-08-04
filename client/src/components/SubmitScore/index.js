@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useMutation } from '@apollo/client';
-import { CREATE_SCORE, UPDATE_SCORE } from '../../utils/mutations';
-import ClickCounter from '../ClickCounter';
+import { CREATE_SCORE } from '../../utils/mutations';
  
-export default function SubmitScore({score}) {
+export default function SubmitScore({score, setStatus}) {
   const [addScore, {error}] = useMutation(CREATE_SCORE);
-
   const saveScore = async (event) => {
     event.preventDefault();
 
@@ -16,7 +14,7 @@ export default function SubmitScore({score}) {
 
         }
       })
-      console.log(data);
+      setStatus('Game successfully submitted!');
     } catch (err) {
       console.error(err);
     }

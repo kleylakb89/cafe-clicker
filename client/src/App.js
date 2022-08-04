@@ -39,12 +39,12 @@ function App() {
         <Router>
           <Routes>
             <Route
-              path="/login"
-              element={<Signup />}
+              path="/game"
+              element={<Game />}
             />
             <Route
               path="/"
-              element={<Game />}
+              element={<Signup />}
             />
             <Route
               path="/leaderboard"

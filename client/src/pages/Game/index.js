@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useQuery } from "@apollo/client";
+import { useQuery, useLazyQuery } from "@apollo/client";
 import "./style.css";
 import Nav from "../../components/Nav/index";
 import ClickCounter from "../../components/ClickCounter";
@@ -16,16 +16,22 @@ function Game() {
   let [multi, setMulti] = useState(false);
   let [passive, setPassive] = useState(false);
   let [cafe, setCafe] = useState(0);
+  let [status, setStatus] = useState('');
+  const [queryGame] = useLazyQuery(QUERY_GAME);
 
-  const { loading, data } = useQuery(QUERY_GAME);
 
-  const loadGame = () => {
-    if (data.game) {
-      setCount(data.game.clicks);
-      setAuto(data.game.autoClicker);
-      setMulti(data.game.multiClicker);
-      setPassive(data.game.passiveClicker);
-      setCafe(data.game.cafeState);
+  
+
+  const loadGame = async () => {
+    const data = await queryGame({variables:{time:new Date()}});
+    const {game} = data.data;
+    if (game) {
+      setCount(game.clicks);
+      setAuto(game.autoClicker);
+      setMulti(game.multiClicker);
+      setPassive(game.passiveClicker);
+      setCafe(game.cafeState);
+      setStatus('Game loaded!');
     }
   };
 
@@ -35,6 +41,7 @@ function Game() {
     setMulti(false);
     setPassive(false);
     setCafe(0);
+    setStatus('New game created! Hit save game to overwrite or load game to retrieve previous game.');
   };
 
   const handleCafe = () => {
@@ -103,7 +110,7 @@ useEffect(() => {
   const handlePassive = () => {
     setPassive(true);
   };
-
+//console.log(count)
   return (
     <div>
       {Auth.loggedIn() ? (
@@ -112,6 +119,7 @@ useEffect(() => {
 
           <div className="">
             <div className="layout">
+              <h4 className="status-text">{status}</h4>
               <h1 className="cafe-title">Cafe Clicker</h1>
               <ClickCounter count={count} handleClick={handleClick} />
               <div className="powerside">
@@ -125,6 +133,7 @@ useEffect(() => {
               <div className="gameside">
                 <div className="game-funcs">
                   <SaveGame
+                    setStatus={setStatus}
                     count={count}
                     auto={auto}
                     multi={multi}
@@ -137,7 +146,8 @@ useEffect(() => {
                   <button className="load-game" onClick={deleteGame}>
                     New Game
                   </button>
-                  <SubmitScore score={count} />
+                  <SubmitScore score={count}
+                  setStatus={setStatus} />
                 </div>
                 <h2 className="how-title">Instructions:</h2>
                 <div className="instructions">
