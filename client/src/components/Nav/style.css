@@ -110,5 +110,21 @@ a:active {
     width: 90%;
     margin-top: 2px;}
   
-
+}
+@media screen and (max-width:415px) {
+  .navbar{
+    width: 90%;
+    margin-top: 12px;}
+  
+  .navbar a{
+    font-size: 14px;
+}
+  .logo{
+    width: 40px;
+  }
+  .menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+  }
+  
 }

@@ -32,3 +32,94 @@
 .score-color{
   color: #14a871;;
 }
+@media screen and (max-width: 1700px) and (max-height:870px){
+  .score-list{
+    font-size: 30px;
+    margin-top: -30px;
+  }
+  .o-list li{
+    margin-top: 30px;
+    padding: 10px;
+  
+  }
+}
+@media screen and (max-width: 1436px) {
+  .score-list{
+    font-size: 28px;
+    margin-top: -30px;
+  }
+  .o-list li{
+    margin-top: 20px;
+    padding: 8px;
+  
+  }
+}
+@media screen and (max-width: 717px) {
+  .score-list{
+    font-size: 18px;
+    margin-top: -30px;
+  }
+  .o-list li{
+    margin-top: 20px;
+    padding: 8px;
+  
+  }
+}
+
+@media screen and (max-width: 503px) {
+  .score-list{
+    font-size: 18px;
+    margin-top: -30px;
+  }
+  .o-list li{
+    margin-top: 5px;
+    padding: 8px;
+  
+  }
+}
+
+@media screen and (max-width: 1132px) and (max-height:763px) {
+  .score-list{
+    font-size: 25px;
+    margin-top: -30px;
+  }
+  .o-list li{
+    margin-top: 20px;
+    padding: 5px;
+  
+  }
+}
+@media screen and (max-width: 1132px) and (max-height:663px) {
+  .score-list{
+    font-size: 22px;
+    margin-top: -30px;
+  }
+  .o-list li{
+    margin-top: 20px;
+    padding: 5px;
+  
+  }
+}
+@media screen and (max-width: 503px) and (max-height:764px) {
+  .score-list{
+    font-size: 16px;
+    margin-top: -30px;
+  }
+  .o-list li{
+    margin-top: 5px;
+    padding: 4px;
+  
+  }
+}
+@media screen and (max-width: 400px) {
+  .score-list{
+    font-size: 14px;
+    margin-top: -30px;
+  }
+  .o-list li{
+    margin-top: 5px;
+    padding: 2px;
+    display:block;
+
+  }
+}
