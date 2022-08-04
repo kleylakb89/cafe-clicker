@@ -66,27 +66,27 @@ function Game() {
     // automatically updates cafe when the clicks hit certain numbers
     if (count === 10) {
       handleCafe();
-      alert("cafe updated!");
+      alert("Cafe Updated!");
     }
     if (count === 20) {
       handleCafe();
-      alert("cafe updated!");
+      alert("Cafe Updated!");
     }
     if (count === 30) {
       handleCafe();
-      alert("cafe updated!");
+      alert("Cafe Updated!");
     }
     if (count === 40) {
       handleCafe();
-      alert("cafe updated!");
+      alert("Cafe Updated!");
     }
     if (count === 50) {
       handleCafe();
-      alert("cafe updated!");
+      alert("Cafe Updated!");
     }
     if (count === 60) {
       handleCafe();
-      alert("cafe updated!");
+      alert("Cafe Updated!");
     }
   };
 
@@ -173,14 +173,14 @@ useEffect(() => {
                     simply click the avocado toast and keep on clicking
                   </p>
                 </div>
-              </div>
-            </div>
-            <div className="caf-head">
-              <div className="welcome">Welcome To Your Cafe</div>
-            </div>
             <div className="cafe-container" id="view-cafe">
               <CafeState cafe={cafe} />
             </div>
+              </div>
+            </div>
+            {/* <div className="caf-head">
+              <div className="welcome">Welcome To Your Cafe</div>
+            </div> */}
           </div>
         </>
       ) : (
