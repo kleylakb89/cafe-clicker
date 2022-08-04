@@ -69,6 +69,7 @@ function Game() {
       handleCafe();
       alert("Cafe Updated!");
     }
+    
     if (count === 20) {
       handleCafe();
       alert("Cafe Updated!");
