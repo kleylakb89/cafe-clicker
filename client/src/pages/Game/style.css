@@ -176,7 +176,9 @@
   font-size: 80px;
   text-shadow: 25px 20px 20px rgba(0, 0, 0, 0.2);
   margin-top: 50px;
-  color: #f9f1cd;
+  color: green;
+  background-color: #f9f1cd;
+  padding: 30px;
 }
 .cafe-container {
   position: absolute;
@@ -186,6 +188,67 @@
 }
 .cafe-img {
   border: 8px solid #f9f1cd;
+}
+
+/* Begining of media queries */
+@media screen and (max-width: 2000px) and (max-height:1000px){
+  .powerside {
+    top: 55%;
+    left: 10%;
+    transform: translate(-50%, -30%);
+  }
+  .counter {
+    font-size: 50px;
+  }
+  .num-of-clicks {
+    margin-top: 30px;
+    font-size: 70px;
+  }
+  .power-title {
+    font-size: 50px;
+  }
+
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    font-size: 24px;
+    padding: 5px;
+  }
+  .powerups {
+    margin-top: 50px;
+  }
+
+  .avac-img {
+    margin-top: 30px;
+    width: 400px;
+  }
+  .instructions {
+    width: 150%;
+    top: 10%;
+  }
+  .how-title {
+    top: 5%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+  }
+  .how-play {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+  }
+
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 8px;
+    margin-left: 20px;
+    font-size: 24px;
+    width: 120%;
+    color: white;
+    padding: 5px;
+  }
+  .gameside {
+    left: 88%;
+  }
 }
 @media screen and (max-width: 1700px) {
   .powerside {
@@ -244,6 +307,13 @@
   }
 }
 @media screen and (max-width: 1700px) and (max-height: 890px) {
+  .cafe-container {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 85%);
+  }
+ }
+@media screen and (max-width: 1700px) and (max-height: 890px) {
   .powerside {
     top: 55%;
     left: 10%;
@@ -300,7 +370,7 @@
     left: 88%;
   }
 }
-@media screen and (max-width: 1700px) and (max-height: 750px) {
+/* @media screen and (max-width: 1700px) and (max-height: 750px) {
   .powerside {
     top: 65%;
     left: 10%;
@@ -359,6 +429,68 @@
     top: 62%;
     left: 88%;
   }
+} */
+@media screen and (max-width: 1700px) and (max-height: 615px) {
+  .powerside {
+    top: 75%;
+    left: 25%;
+    transform: translate(-50%, -30%);
+  }
+  .counter {
+    font-size: 34px;
+  }
+  .num-of-clicks {
+    font-size: 50px;
+  }
+  .power-title {
+    margin-top: -97px;
+    font-size: 34px;
+  }
+
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    font-size: 18px;
+    padding: 4px;
+  }
+  .powerups {
+    left: -90%;
+    margin-top: -60px;
+  }
+
+  .avac-img {
+    margin-top: -40px;
+    width: 180px;
+  }
+  .instructions {
+    width: 170%;
+    top: -70%;
+    left: -95%;
+  }
+  .how-title {
+    top: -80%;
+    transform: translate(-50%, -50%);
+    font-size: 34px;
+    left: -90%;
+  }
+  .how-play {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 8px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+    padding: 5px;
+  }
+  .gameside {
+    top: 78%;
+    left: 88%;
+  }
 }
 
 @media screen and (max-width: 1350px) {
@@ -403,7 +535,9 @@
     letter-spacing: 1px;
     margin-right: 20px;
   }
-
+  .game-funcs{
+    left: 20%;
+  }
   .game-funcs button {
     background-color: #04aa6d;
     border: 1px solid green;
@@ -420,7 +554,7 @@
     width: 900px;
   }
   .cafe-container {
-    top: 64%;
+    top: 68%;
     left: 50%;
     transform: translate(-50%, 85%);
   }
@@ -489,6 +623,71 @@
     transform: translate(-50%, 85%);
   }
 }
+/* @media screen and (max-width: 1350px) and (max-height: 900px) {
+  .powerside {
+    top: 55%;
+    left: 12%;
+    transform: translate(-50%, -30%);
+  }
+
+  .num-of-clicks {
+    font-size: 70px;
+  }
+  .power-title {
+    font-size: 50px;
+  }
+
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .powerups {
+    margin-top: 50px;
+  }
+
+  .avac-img {
+    width: 350px;
+  }
+  .instructions {
+    width: 170%;
+    top: 5%;
+  }
+  .how-title {
+    top: 5%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+  }
+  .how-play {
+    margin-top: -10px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 8px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+    padding: 5px;
+  }
+  .gameside {
+    top: 52%;
+    left: 88%;
+  }
+  .cafe-img {
+    width: 900px;
+  }
+  .cafe-container {
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, 85%);
+  }
+} */
+
 @media screen and (max-width: 1150px) {
   .powerside {
     top: 55%;
@@ -607,6 +806,68 @@
     left: 85%;
   }
 }
+@media screen and (max-width: 1150px) and (max-height: 790px) {
+  .powerside {
+    top: 60%;
+    left: 15%;
+    transform: translate(-50%, -30%);
+  }
+
+  .num-of-clicks {
+    font-size: 75px;
+  }
+  .counter {
+    font-size: 40px;
+  }
+  .power-title {
+    font-size: 40px;
+  }
+
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .powerups {
+    margin-top: 20px;
+  }
+
+  .avac-img {
+    width: 300px;
+  }
+  .instructions {
+    width: 150%;
+    top: 7%;
+    left: 50%;
+  }
+  .how-title {
+    top: 5%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+  }
+  .how-play {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-right: 20px;
+  }
+  .game-funcs{
+    top: 24%;
+  }
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 5px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+    padding: 3px;
+  }
+  .gameside {
+    left: 85%;
+  }
+}
 @media screen and (max-width: 1150px) and (max-height: 700px) {
   .powerside {
     top: 65%;
@@ -621,6 +882,7 @@
     font-size: 30px;
   }
   .power-title {
+    top: 75%;
     font-size: 30px;
   }
 
@@ -631,7 +893,8 @@
     padding: 3px;
   }
   .powerups {
-    margin-top: 10px;
+    left: 42%;
+    margin-top: 20px;
   }
 
   .avac-img {
@@ -981,16 +1244,7 @@
     transform: translate(-50%, 85%);
   }
 }
-@media screen and (max-width: 937px) {
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
-}
+
 @media screen and (max-width: 900px) {
   .powerside {
     top: 55%;
@@ -1285,6 +1539,82 @@
     transform: translate(-50%, 85%);
   }
 }
+
+@media screen and (max-width: 900px) and (max-height: 583px) {
+  .powerside {
+    top: 70%;
+    left: 12%;
+    transform: translate(-50%, -30%);
+  }
+
+  .num-of-clicks {
+    font-size: 45px;
+  }
+  .counter {
+    font-size: 25px;
+  }
+  .power-title {
+    margin-top: -25px;
+    font-size: 25px;
+  }
+
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    font-size: 12px;
+    padding: 2px;
+  }
+  .powerups {
+    left: 45%;
+    margin-top: -6px;
+  }
+
+  .avac-img {
+    width: 160px;
+    margin-left: 100px;
+    margin-top: -40px;
+  }
+  .instructions {
+    width: 390%;
+    top: 12%;
+    left: -110%;
+  }
+  .how-title {
+    top: 15%;
+    left: -250%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+  }
+  .how-play {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-right: 30px;
+  }
+  .game-funcs {
+    top: 40%;
+  }
+
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 8px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: white;
+    padding: 4px;
+  }
+  .gameside {
+    left: 85%;
+  }
+  .cafe-img {
+    width: 650px;
+  }
+  .cafe-container {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 85%);
+  }
+}
 @media screen and (max-width: 820px) and (max-height:1200px) {
   .powerside {
     top: 45%;
@@ -1350,81 +1680,6 @@
     color: white;
     padding: 5px;
     width: 150%;
-  }
-  .gameside {
-    left: 85%;
-  }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
-}
-@media screen and (max-width: 900px) and (max-height: 583px) {
-  .powerside {
-    top: 70%;
-    left: 12%;
-    transform: translate(-50%, -30%);
-  }
-
-  .num-of-clicks {
-    font-size: 45px;
-  }
-  .counter {
-    font-size: 25px;
-  }
-  .power-title {
-    margin-top: -25px;
-    font-size: 25px;
-  }
-
-  .powerups button {
-    background-color: #04aa6d;
-    border: 1px solid green;
-    font-size: 12px;
-    padding: 2px;
-  }
-  .powerups {
-    left: 45%;
-    margin-top: -6px;
-  }
-
-  .avac-img {
-    width: 160px;
-    margin-left: 100px;
-    margin-top: -40px;
-  }
-  .instructions {
-    width: 390%;
-    top: 12%;
-    left: -110%;
-  }
-  .how-title {
-    top: 15%;
-    left: -250%;
-    transform: translate(-50%, -50%);
-    font-size: 25px;
-  }
-  .how-play {
-    font-size: 10px;
-    letter-spacing: 1px;
-    margin-right: 30px;
-  }
-  .game-funcs {
-    top: 40%;
-  }
-
-  .game-funcs button {
-    background-color: #04aa6d;
-    border: 1px solid green;
-    margin: 8px;
-    margin-left: 20px;
-    font-size: 14px;
-    color: white;
-    padding: 4px;
   }
   .gameside {
     left: 85%;
@@ -1560,7 +1815,7 @@
     margin-right: 30px;
   }
 }
-@media screen and (max-width: 820px) {
+/* @media screen and (max-width: 820px) {
   .cafe-img {
     width: 450px;
   }
@@ -1572,7 +1827,7 @@
   .welcome {
     font-size: 55px;
   }
-}
+} */
 @media screen and (max-width: 795px) {
   .powerside {
     top: 50%;
@@ -1689,12 +1944,12 @@
     width: 250px;
   }
   .instructions {
-    top: 28%;
+    top: 34%;
     left: 12%;
     width: 450px;
   }
   .how-title {
-    margin-top: -55px;
+    margin-top: -65px;
     left: 1%;
     font-size: 30px;
   }
@@ -1797,6 +2052,167 @@
     color: white;
     padding: 2px;
     width: 35%;
+  }
+  .gameside {
+    top: 80%;
+    left: 85%;
+  }
+  .cafe-img {
+    width: 650px;
+  }
+  .cafe-container {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 85%);
+  }
+}
+@media screen and (max-width: 740px) and (max-height: 900px) {
+  .powerside {
+    top: 60%;
+    left: 15%;
+    transform: translate(-50%, -30%);
+  }
+
+  .num-of-clicks {
+    margin-top: 30px;
+    font-size: 45px;
+  }
+  .counter {
+    font-size: 30px;
+  }
+  .power-title {
+    top: 35%;
+    font-size: 30px;
+  }
+
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    font-size: 15px;
+    padding: 2px;
+    margin-left: 10px;
+  }
+  .powerups {
+    left: 55%;
+    margin-top: -25px;
+  }
+
+  .avac-img {
+    margin-top: -40px;
+    margin-left: 35px;
+    width: 200px;
+  }
+  .instructions {
+    top: 38%;
+    left: 22%;
+    width: 450px;
+  }
+  .how-title {
+    margin-top: -55px;
+    left: 1%;
+    font-size: 20px;
+  }
+  .how-play {
+    margin: -90px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-right: 30px;
+  }
+  .game-funcs {
+    left: 78%;
+    top: 25%;
+  }
+
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 4px;
+    margin-left: 14px;
+    font-size: 15px;
+    color: white;
+    padding: 2px;
+    width: 35%;
+  }
+  .gameside {
+    top: 80%;
+    left: 85%;
+  }
+  .cafe-img {
+    width: 650px;
+  }
+  .cafe-container {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 85%);
+  }
+}
+@media screen and (max-width: 740px) and (max-height: 700px) {
+  .powerside {
+    top: 70%;
+    left: 15%;
+    transform: translate(-50%, -30%);
+  }
+
+  .num-of-clicks {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  .counter {
+    font-size: 25px;
+  }
+  .power-title {
+    left: 48%;
+    top: 35%;
+    font-size: 25px;
+  }
+
+  .powerups button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    font-size: 15px;
+    padding: 2px;
+    margin-left: 10px;
+  }
+  .powerups {
+    left: 55%;
+    margin-top: -25px;
+  }
+
+  .avac-img {
+    margin-top: -40px;
+    margin-left: -15px;
+    width: 150px;
+  }
+  .instructions {
+    top: 42%;
+    left: 28%;
+    width: 300px;
+  }
+  .how-title {
+    margin-top: -95px;
+    left: 20%;
+    font-size: 20px;
+  }
+  .how-play {
+    margin: -90px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-right: 30px;
+  }
+  .game-funcs {
+    left: 88%;
+    top: 2%;
+  }
+
+  .game-funcs button {
+    background-color: #04aa6d;
+    border: 1px solid green;
+    margin: 4px;
+    margin-left: 14px;
+    font-size: 15px;
+    color: white;
+    padding: 2px;
+    width: 25%;
   }
   .gameside {
     top: 80%;
@@ -2205,8 +2621,11 @@
   .cafe-img {
     width: 400px;
   }
+  .welcome{
+    font-size: 50px;
+  }
   .cafe-container {
-    top: 87%;
+    top: 88%;
     left: 50%;
     transform: translate(-50%, 85%);
   }
@@ -2412,7 +2831,7 @@
     font-size: 65px;
   }
   .instructions {
-    margin-top: 20px;
+    top: 30%;
     left: -12%;
     width: 200px;
   }
@@ -2455,7 +2874,7 @@
     font-size: 40px;
   }
   .cafe-container {
-    top: 90%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, 85%);
   }
@@ -2498,7 +2917,7 @@
     width: 140px;
   }
   .instructions {
-    margin-top: -20px;
+    top: 35%;
     left: 5%;
     width: 200px;
   }
@@ -2538,189 +2957,11 @@
     width: 300px;
   }
   .welcome {
-    font-size: 40px;
+    font-size: 35px;
   }
   .cafe-container {
-    top: 95%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, 85%);
   }
 }
-/* @media screen and (max-height: 868px) {
-
-  .instructions {
-    margin-top: -10px;
-    left: -52%;
-    width: 200px;
-    
-  }
-  .avac-img{
-    width: 250px;
-  }
-  .how-title {
-    margin-top: -130px;
-    left: -95%;
-    font-size: 30px;
-   
-  }
-  .how-play {
-    margin: -60px;
-    margin-top: -40px;
-    font-size: 10px;
-    letter-spacing: 1px;
-    margin-right: 10px;
-  }
-  .game-funcs{
-    top: 35%;
-    left: 44%
-  }
-  
-  .game-funcs button {
-    background-color: #04aa6d;
-    border: 1px solid green;
-    margin: 6px;
-    margin-left: 14px;
-    font-size: 15px;
-    color: white;
-    padding: 4px;
-    width: 55%;
-  }
-  .gameside{
-    top: 80%;
-    left: 95%;
-  }
- 
-
-} */
-/* @media screen and (max-height: 790px) {
-  .powerside{
-    top: 60%;
-    transform: translate(-50%, -30%);
-  }
-
-  .counter{
-    font-size: 35px;
-  }
-
-  .power-title {
-    font-size: 40px;
-    
-  }
-  .instructions {
-    width: 150%;
-    top: 10%;
-   
-  }
-  .how-title {
-    top: 10%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-  }
-  .avac-img{
-    width: 300px;
-    
-  }
-  .game-funcs {
-    top: 25%;
-  }
-
-} */
-
-/* @media screen and (max-height: 741px) {
-  .powerside{
-    top: 60%;
-    transform: translate(-50%, -30%);
-  }
-
-  .counter{
-    font-size: 35px;
-  }
-
-  .power-title {
-    font-size: 40px;
-    
-  }
-  .powerups {
-    margin-top: 30px;
-  }
-  .power-title{
-    top: 35%;
-  }
-  .instructions {
-    width: 150%;
-    top: 2%;
-   
-  }
-  .how-title {
-    top: 8%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-  }
-  .avac-img{
-    width: 250px;
-    
-  }
-  .game-funcs {
-    top: 30%;
-  }
-  .how-play {
-    font-size: 11px;
-    letter-spacing: 1px;
-  }
-
-} */
-/* @media screen and (max-height: 651px) {
-  .powerside{
-    top: 65%;
-    transform: translate(-50%, -30%);
-  }
-
-  .counter{
-    font-size: 32px;
-  }
-  .num-of-clicks{
-    margin-top: 5px;
-    font-size: 50px;
-  }
-  .power-title {
-    font-size: 32px;
-    
-  }
-  .powerups {
-    left: 60%;
-    margin-top: -2px;
-  }
-  .power-title{
-    top: 30%;
-  }
-  .powerups button {
-    margin: 4px;
-    font-size: 16px;
-  }
-  .instructions {
-    width: 190%;
-    top: 12%;
-   
-  }
-  .how-title {
-    top: 15%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-  }
-  .avac-img{
-    width: 200px;
-    
-  }
-  .game-funcs button {
-    font-size: 16px;
-    margin: 2px;
-  }
-  .game-funcs {
-    top: 38%;
-  }
-  .how-play {
-    font-size: 11px;
-    letter-spacing: 1px;
-  }
-
-} */
