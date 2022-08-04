@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 
+// queries for one score, all scores, one game, and a user (unused)
 export const QUERY_SCORE = gql`
   query score {
     score {

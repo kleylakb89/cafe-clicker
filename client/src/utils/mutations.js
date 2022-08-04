@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 
+// Mutations for creating a user, logging in, creating a game, updating a game, creating a score, and three unused mutations: deleting a game, updating a score, and deleting a score
 export const CREATE_USER = gql`
   mutation createUser($username: String!, $password: String!) {
     createUser(username: $username, password: $password){
@@ -7,7 +8,6 @@ export const CREATE_USER = gql`
       user {
         _id
         username
-        #password
       }
     }
   }

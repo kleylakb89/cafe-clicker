@@ -6,6 +6,7 @@ import { QUERY_SCORES } from '../../utils/queries';
 import ScoresList from '../../components/ScoresList';
 
 function Leaderboard() {
+  // queries scores to load as a top ten list after passing the values to ScoresList
   const {loading, data} = useQuery(QUERY_SCORES);
   const scores = data?.scores || [];
 

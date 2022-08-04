@@ -3,7 +3,7 @@ import "./style.css";
 import Auth from '../../utils/auth';
 import spatula from '../../images/spatula.png'
 
-
+// Nav bar with a signout function to logout users
 function Nav() {
   const signout = () => {
     Auth.logout();

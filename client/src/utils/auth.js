@@ -1,5 +1,6 @@
 import decode from 'jwt-decode';
 
+// authorization utility using jwt
 class AuthService {
   getProfile() {
     return decode(this.getToken());

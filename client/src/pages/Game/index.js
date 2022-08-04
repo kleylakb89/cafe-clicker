@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useQuery, useLazyQuery } from "@apollo/client";
+import { useLazyQuery } from "@apollo/client";
 import "./style.css";
 import Nav from "../../components/Nav/index";
 import ClickCounter from "../../components/ClickCounter";
@@ -11,17 +11,18 @@ import { QUERY_GAME } from "../../utils/queries";
 import CafeState from "../Cafe";
 
 function Game() {
+  // start by setting everything to base new game state
   let [count, setCount] = useState(0);
   let [auto, setAuto] = useState(false);
   let [multi, setMulti] = useState(false);
   let [passive, setPassive] = useState(false);
   let [cafe, setCafe] = useState(0);
   let [status, setStatus] = useState('');
+  
+  // using lazy query to call within function
   const [queryGame] = useLazyQuery(QUERY_GAME);
 
-
-  
-
+  // queries latest saved game and sets the variables to the state from the saved game
   const loadGame = async () => {
     const data = await queryGame({variables:{time:new Date()}});
     const {game} = data.data;
@@ -35,6 +36,7 @@ function Game() {
     }
   };
 
+  // sets everything to a new game state and updates status
   const deleteGame = () => {
     setCount(0);
     setAuto(false);
@@ -44,17 +46,24 @@ function Game() {
     setStatus('New game created! Hit save game to overwrite or load game to retrieve previous game.');
   };
 
+  // increments cafe
   const handleCafe = () => {
     if (cafe < 6) {
       setCafe(cafe + 1);
     }
   };
+
+  // handles clicking on the avocado
   const handleClick = () => {
+    // if multi power up is active, clicks are doubled
     if (multi) {
       setCount(count + 2);
+    // otherwise one click increases count by one
     } else {
       setCount(count + 1);
     }
+
+    // automatically updates cafe when the clicks hit certain numbers
     if (count === 10) {
       handleCafe();
       alert("cafe updated!");
@@ -81,19 +90,23 @@ function Game() {
     }
   };
 
+  // setting up an interval for the autoclicker power up
 useEffect(() => {
     let interval;
+    // every second the autoclicker adds one click
     if (auto) {
       interval = setInterval(() => {
         setCount(c=>c+1);
       }, 1000);
       
     }
+    // leaving the page clears the interval
     return ()=>{
       clearInterval(interval);
     }
   }, [auto]);
 
+  // when user passes 20 clicks, they can choose to active the autoclicker
   const handleAuto = () => {
     if (count > 20) {
       setAuto(true);
@@ -101,16 +114,18 @@ useEffect(() => {
     
   };
 
+  // when user passes 40 clicks, they can choose to active the multiclicker
   const handleMulti = () => {
     if (count > 40) {
       setMulti(true);
     }
   };
 
+  // powerup code to utilize in future development
   // const handlePassive = () => {
   //   setPassive(true);
   // };
-//console.log(count)
+
   return (
     <div>
       {Auth.loggedIn() ? (
@@ -153,7 +168,7 @@ useEffect(() => {
                 <div className="instructions">
                   <p className="how-play">
                     Click the avocado toast as many times as your fingers will
-                    allow! As the week goes by, and the clicks add up, you will
+                    allow! As the clicks add up, you will
                     receive power ups to help you gain more clicks. To begin,
                     simply click the avocado toast and keep on clicking
                   </p>

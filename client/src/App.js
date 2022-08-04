@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -11,12 +11,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from "./pages/Signup";
 import Game from "./pages/Game";
 import Leaderboard from './pages/Leaderboard';
-import Nav from './components/Nav'
 
+// using graphql
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
 
+// getting the login token
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
   return {
@@ -27,11 +28,13 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+// using apollo
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
+// setting up our routes
 function App() {
   return (
     <ApolloProvider client={client}>

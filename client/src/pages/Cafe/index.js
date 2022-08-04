@@ -8,6 +8,7 @@ import cafe5 from '../../images/cafe 5.png';
 import cafe6 from '../../images/cafe 6.png';
 
 function CafeState({cafe}) {
+    // updates the cafe image based on the cafeState passed from the Game index.js
     // eslint-disable-next-line default-case
     switch (cafe) {
         case 0: return <><img src={cafe0} alt='cafe0' className='cafe-img'></img></>
