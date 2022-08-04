@@ -3,15 +3,15 @@ import { useMutation } from '@apollo/client';
 import { CREATE_SCORE } from '../../utils/mutations';
  
 export default function SubmitScore({score, setStatus}) {
-  const [addScore, {error}] = useMutation(CREATE_SCORE);
+  const [addScore] = useMutation(CREATE_SCORE);
   const saveScore = async (event) => {
     event.preventDefault();
 
+    // saves score to database
     try {
       const data = await addScore({
         variables: {
-          score,
-
+          score
         }
       })
       setStatus('Game successfully submitted!');

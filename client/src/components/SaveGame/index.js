@@ -4,6 +4,7 @@ import { CREATE_GAME, UPDATE_GAME } from '../../utils/mutations';
 import { QUERY_GAME } from '../../utils/queries';
 
 export default function SaveGame({count, auto, multi, passive, cafe, setStatus}) {
+    // utilized useLazyQuery so query can be made within the following function
     const [queryGame] = useLazyQuery(QUERY_GAME);
     const [createGame] = useMutation(CREATE_GAME);
     const [updateGame] = useMutation(UPDATE_GAME);
@@ -12,6 +13,7 @@ export default function SaveGame({count, auto, multi, passive, cafe, setStatus})
         event.preventDefault();
         const data = await queryGame({variables:{time:new Date()}});
         const {game} = data.data;
+        // if no game exists, creates a new save for the user
         if (!game) {
             try {
                 const data = await createGame({
@@ -27,6 +29,7 @@ export default function SaveGame({count, auto, multi, passive, cafe, setStatus})
             } catch (err) {
                 console.error(err);
             }
+        // if there is an existing game associated with the user, updates that game
         } else {
             try {
                 const data = await updateGame({

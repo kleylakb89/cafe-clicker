@@ -3,16 +3,17 @@ import "./style.css";
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../../utils/mutations';
 import Login from '../../components/Login';
-
 import Auth from '../../utils/auth';
 
 function Signup() {
+  // sets up the form for signing up a new user
   const [formState, setFormState] = useState({
     name: '',
     password: '',
   });
   const [createUser, { error, data }] = useMutation(CREATE_USER);
 
+  // handles formstate changes
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -22,6 +23,7 @@ function Signup() {
     });
   };
 
+  // handles the form submit to create a token for login
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
