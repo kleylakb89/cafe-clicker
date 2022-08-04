@@ -10,13 +10,13 @@ import cafe6 from '../../images/cafe 6.png';
 function CafeState({cafe}) {
     // eslint-disable-next-line default-case
     switch (cafe) {
-        case 0: return <><img src={cafe0} alt='cafe0'></img></>
-        case 1: return <><img src={cafe1} alt='cafe1'></img></>
-        case 2: return <><img src={cafe2} alt='cafe2'></img></>
-        case 3: return <><img src={cafe3} alt='cafe3'></img></>
-        case 4: return <><img src={cafe4} alt='cafe4'></img></>
-        case 5: return <><img src={cafe5} alt='cafe5'></img></>
-        case 6: return <><img src={cafe6} alt='cafe6'></img></>
+        case 0: return <><img src={cafe0} alt='cafe0' className='cafe-img'></img></>
+        case 1: return <><img src={cafe1} alt='cafe1'className='cafe-img'></img></>
+        case 2: return <><img src={cafe2} alt='cafe2'className='cafe-img'></img></>
+        case 3: return <><img src={cafe3} alt='cafe3'className='cafe-img'></img></>
+        case 4: return <><img src={cafe4} alt='cafe4'className='cafe-img'></img></>
+        case 5: return <><img src={cafe5} alt='cafe5'className='cafe-img'></img></>
+        case 6: return <><img src={cafe6} alt='cafe6'className='cafe-img'></img></>
         
     }
 }
