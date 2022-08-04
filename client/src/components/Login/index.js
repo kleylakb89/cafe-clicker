@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Auth from '../../utils/auth';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
-import { Link } from 'react-router-dom';
+
 
 const Login = () => {
   const [formState, setFormState] = useState({ username: '', password: '' });
@@ -42,8 +42,7 @@ const Login = () => {
     <div className="login">
       {data ? (
         <p>
-          Success! You may now head{' '}
-          <Link to="/">back to the homepage.</Link>
+          Success!
         </p>
       ) : (
         <form onSubmit={handleFormSubmit}>
