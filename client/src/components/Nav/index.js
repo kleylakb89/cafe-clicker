@@ -15,6 +15,7 @@ function Nav() {
             <li><a href="/game">Home</a></li>
             <li><a  href="/" onClick={signout}>Logout</a></li>
             <li><a href="/leaderboard">Leader Board</a></li>
+            <li><a href="#view-cafe">View Cafe</a></li>
         </ul>
         <img src={spatula }className="logo" width="100" ></img>
     </div>

@@ -163,7 +163,7 @@ useEffect(() => {
             <div className="caf-head">
               <div className="welcome">Welcome To Your Cafe</div>
             </div>
-            <div className="cafe-container">
+            <div className="cafe-container" id="view-cafe">
               <CafeState cafe={cafe} />
             </div>
           </div>
