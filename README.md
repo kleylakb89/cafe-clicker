@@ -20,7 +20,10 @@ If you need to save your progress, you can click the save game button and come b
 
 ## Visuals
 
-![Home Page](./public/images/BookNook1.png)
+![Login Page](./client/src/images/Log-screen.png)
+![Game Page](./client/src/images/Game-screen.png)
+![Leader Board Page](./client/src/images/Leader-screen.png)
+![Cafe Page](./client/src/images/Cafe-screen.png)
 
 
 ## Technologies Used
