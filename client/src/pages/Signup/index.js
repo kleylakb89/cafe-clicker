@@ -4,6 +4,7 @@ import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../../utils/mutations';
 import Login from '../../components/Login';
 import Auth from '../../utils/auth';
+import avac1 from '../../images/Avacado 1.png'
 
 function Signup() {
   // sets up the form for signing up a new user
@@ -39,6 +40,45 @@ function Signup() {
   };
 
   return (
+    <>
+    <div class="snowflakes" aria-hidden="true">
+  
+  <div class="snowflake">
+  <img src={avac1} className="avac"></img>
+  </div>
+  <div class="snowflake">
+  <img src={avac1} className="avac"></img>
+  </div>
+  <div class="snowflake">
+  <img src={avac1} className="avac"></img>
+  </div>
+  <div class="snowflake">
+  <img src={avac1} className="avac"></img>
+  </div>
+  <div class="snowflake">
+  <img src={avac1} className="avac"></img>
+  </div>
+  <div class="snowflake">
+  <img src={avac1} className="avac"></img>
+
+  </div>
+  <div class="snowflake">
+  <img src={avac1} className="avac"></img>
+
+  </div>
+  <div class="snowflake">
+  <img src={avac1} className="avac"></img>
+
+  </div>
+  <div class="snowflake">
+  <img src={avac1} className="avac"></img>
+
+  </div>
+  <div class="snowflake">
+  <img src={avac1} className="avac"></img>
+
+  </div>
+</div>
     <div className="sign">
       <div className="main">
         <input type="checkbox" id="chk" aria-hidden="true" />
@@ -81,6 +121,7 @@ function Signup() {
         <Login />
       </div>
     </div>
+    </>
   );
 }
 
