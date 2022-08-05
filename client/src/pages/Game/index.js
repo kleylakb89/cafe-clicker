@@ -82,11 +82,11 @@ function Game() {
       handleCafe();
       alert("Cafe Updated!");
     }
-    if (count > 50) {
+    if (count >= 50 && count < 53) {
       handleCafe();
       alert("Cafe Updated!");
     }
-    if (count > 60) {
+    if (count >= 60 && count < 63) {
       handleCafe();
       alert("Cafe Updated!");
     }
