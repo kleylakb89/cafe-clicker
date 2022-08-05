@@ -155,8 +155,8 @@ function Game() {
               <div className="powerside">
                 <div className="power-title">Power Ups</div>
                 <div className="powerups">
-                  <button className="power-btn" onClick={handleAuto}>AutoClicker (20)</button>
-                  <button className="power-btn" onClick={handleMulti}>MultiClicker (40)</button>
+                  <button className="power-btn" onClick={handleAuto}>{`${auto ? 'Active!' : 'AutoClicker (20)'}`}</button>
+                  <button className="power-btn" onClick={handleMulti}>{`${multi ? 'Active!' : 'MultiClicker (40)'}`}</button>
                   {/* <button className="power-btn">Passive Clicker</button> */}
                 </div>
               </div>
