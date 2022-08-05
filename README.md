@@ -74,4 +74,4 @@ Questions, comments or concerns? Feel free to reach out to any of us by email:
 ## Resources
 - [Repo Link](https://github.com/kleylakb89/cafe-clicker)
 
-- [Live Site]()
+- [Live Site](https://peaceful-oasis-22532.herokuapp.com/)
