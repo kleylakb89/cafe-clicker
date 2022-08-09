@@ -141,7 +141,7 @@ function Game() {
     <div>
       {Auth.loggedIn() ? (
         <>
-          <Nav handleView={handleView} />
+          <Nav handleView={handleView} check={check} />
 
           <div className="">
             <div className="layout">
