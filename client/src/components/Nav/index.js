@@ -4,7 +4,7 @@ import Auth from "../../utils/auth";
 import spatula from "../../images/spatula.png";
 
 // Nav bar with a signout function to logout users
-function Nav({ handleView }) {
+function Nav({ handleView, check }) {
   const signout = () => {
     Auth.logout();
   };
@@ -32,8 +32,8 @@ function Nav({ handleView }) {
             <li>
               <a href="/leaderboard">Leader Board</a>
             </li>
-            <li classname="view-button" onClick={handleView}>
-              <a href="#cafe">View Cafe</a>
+            <li className="view-button" onClick={handleView}>
+              <a href="#cafe">{`${check ? 'Close Cafe' : 'View Cafe'}`}</a>
             </li>
           </ul>
           <img src={spatula} alt="spatula" className="logo" width="100"></img>
