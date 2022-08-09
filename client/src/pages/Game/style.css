@@ -200,12 +200,7 @@
   background-color: #f9f1cd;
   padding: 30px;
 }
-/* .cafe-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 85%);
-} */
+
 .cafe-img {
   border: 8px solid #f9f1cd;
 }
@@ -327,10 +322,8 @@
   }
 }
 @media screen and (max-width: 1700px) and (max-height: 890px) {
-  .cafe-container {
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, 85%);
+  .cafe-img{
+    width: 80%;
   }
  }
 @media screen and (max-width: 1700px) and (max-height: 890px) {
@@ -639,14 +632,7 @@
   .gameside {
     left: 88%;
   }
-  .cafe-img {
-    width: 900px;
-  }
-  .cafe-container {
-    top: 68%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 1350px) and (max-height: 900px) {
   .powerside {
@@ -703,14 +689,7 @@
     top: 52%;
     left: 88%;
   }
-  .cafe-img {
-    width: 900px;
-  }
-  .cafe-container {
-    top: 64%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 1350px) and (max-height: 840px) {
   .powerside {
@@ -774,14 +753,7 @@
     top: 52%;
     left: 88%;
   }
-  .cafe-img {
-    width: 900px;
-  }
-  .cafe-container {
-    top: 64%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 1350px) and (max-height: 900px) {
   .powerside {
@@ -838,14 +810,7 @@
     top: 52%;
     left: 88%;
   }
-  .cafe-img {
-    width: 900px;
-  }
-  .cafe-container {
-    top: 64%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 1350px) and (max-height: 650px){
   .powerside {
@@ -970,14 +935,7 @@
     top: 52%;
     left: 88%;
   }
-  .cafe-img {
-    width: 900px;
-  }
-  .cafe-container {
-    top: 64%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 
 @media screen and (max-width: 1150px) {
@@ -1370,14 +1328,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 971px) {
   .avac-img {
@@ -1454,14 +1405,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+  
 }
 @media screen and (max-width: 930px) and (max-height:940px){
   .powerside {
@@ -1532,14 +1476,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 930px) and (max-height:840px){
   .num-of-clicks {
@@ -1617,14 +1554,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 930px) and (max-height:615px){
   
@@ -1699,14 +1629,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 912px) and (max-height: 1200px) {
   .powerside {
@@ -1774,14 +1697,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 912px) and (max-height: 1200px){
   .avac-img{
@@ -1854,14 +1770,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 900px) {
   .powerside {
@@ -1927,14 +1836,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+  
 }
 
 @media screen and (max-width: 900px) and (max-height: 840px) {
@@ -2001,14 +1903,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+  
 }
 @media screen and (max-width: 900px) and (max-height: 790px) {
   .powerside {
@@ -2074,14 +1969,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 900px) and (max-height: 750px) {
   .powerside {
@@ -2147,14 +2035,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 
 @media screen and (max-width: 900px) and (max-height:615px){
@@ -2233,14 +2114,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+  
 }
 @media screen and (max-width: 820px) and (max-height:1200px) {
   .powerside {
@@ -2311,14 +2185,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 820px) and (max-height:1180px) {
   .powerside {
@@ -2390,14 +2257,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+  
 }
 @media screen and (max-width: 820px) and (max-height: 990px) {
   .powerside {
@@ -2466,14 +2326,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 820px) and (max-height: 886px) {
   .powerside {
@@ -2543,14 +2396,7 @@
   .gameside {
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+  
 }
 @media screen and (max-width: 820px) and (max-height: 840px) {
   .powerside {
@@ -2621,14 +2467,7 @@
   .gameside {
     left: 95%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 820px) and (max-height: 650px) {
   .powerside {
@@ -2699,38 +2538,8 @@
   .gameside {
     left: 95%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
-/* @media screen and (max-width: 820px) and (max-height: 600px) {
-  .instructions {
-    width: 390%;
-    top: 15%;
-    left: -50%;
-  }
-  .avac-img {
-    width: 150px;
-    margin-left: 10px;
-    margin-top: -40px;
-  }
-  .how-title {
-    top: 18%;
-    left: -150%;
-    transform: translate(-50%, -50%);
-    font-size: 25px;
-  }
-  .how-play {
-    font-size: 10px;
-    letter-spacing: 1px;
-    margin-right: 30px;
-  }
-} */
 
 @media screen and (max-width: 795px) {
   .powerside {
@@ -2803,14 +2612,7 @@
     top: 80%;
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 795px) and (max-height: 900px) {
   .powerside {
@@ -2882,14 +2684,7 @@
     top: 80%;
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 795px) and (max-height: 840px) {
   .powerside {
@@ -2961,14 +2756,7 @@
     top: 80%;
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 795px) and (max-height: 790px) {
   .powerside {
@@ -3041,14 +2829,7 @@
     top: 80%;
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+  
 }
 @media screen and (max-width: 795px) and (max-height: 718px) {
   .powerside {
@@ -3121,14 +2902,7 @@
     top: 80%;
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+  
 }
 @media screen and (max-width: 740px) and (max-height: 900px) {
   .powerside {
@@ -3201,14 +2975,7 @@
     top: 80%;
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 740px) and (max-height: 840px) {
   .powerside {
@@ -3281,14 +3048,7 @@
     top: 80%;
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 740px) and (max-height: 770px) {
   .powerside {
@@ -3363,14 +3123,7 @@
     top: 80%;
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 740px) and (max-height: 690px) {
   .powerside {
@@ -3444,14 +3197,7 @@
     top: 80%;
     left: 85%;
   }
-  .cafe-img {
-    width: 650px;
-  }
-  .cafe-container {
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+  
 }
 @media screen and (max-width: 709px) {
   .powerside {
@@ -3523,14 +3269,7 @@
     top: 80%;
     left: 95%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .cafe-container {
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 709px) and (max-height:900px) {
   .powerside {
@@ -3606,14 +3345,7 @@
     top: 80%;
     left: 95%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .cafe-container {
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 709px) and (max-height:840px) {
   .powerside {
@@ -3689,14 +3421,7 @@
     top: 80%;
     left: 95%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .cafe-container {
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 709px) and (max-height:770px) {
   .powerside {
@@ -3772,14 +3497,7 @@
     top: 80%;
     left: 95%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .cafe-container {
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 628px) and (max-height:840px) {
   
@@ -3894,14 +3612,7 @@
     top: 80%;
     left: 95%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .cafe-container {
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 628px) and (max-height:750px) {
   
@@ -3978,14 +3689,7 @@
     top: 80%;
     left: 95%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .cafe-container {
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
 @media screen and (max-width: 600px) {
   .powerside {
@@ -4057,14 +3761,7 @@
     top: 75%;
     left: 105%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .cafe-container {
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 600px) and (max-height:900px){
   .powerside {
@@ -4139,17 +3836,7 @@
     top: 75%;
     left: 105%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .welcome{
-    font-size: 50px;
-  }
-  .cafe-container {
-    top: 88%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 600px) and (max-height:750px){
   .powerside {
@@ -4222,17 +3909,7 @@
     top: 75%;
     left: 105%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .welcome{
-    font-size: 50px;
-  }
-  .cafe-container {
-    top: 88%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+  
 }
 @media screen and (max-width: 600px) and (max-height:680px){
   .powerside {
@@ -4307,17 +3984,7 @@
     top: 75%;
     left: 105%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .welcome{
-    font-size: 50px;
-  }
-  .cafe-container {
-    top: 88%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 
 
@@ -4393,14 +4060,7 @@
     top: 80%;
     left: 105%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .cafe-container {
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 462px) and (max-height:1000px) {
   .powerside {
@@ -4474,14 +4134,7 @@
     top: 80%;
     left: 105%;
   }
-  .cafe-img {
-    width: 400px;
-  }
-  .cafe-container {
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 416px) {
   .powerside {
@@ -4558,17 +4211,7 @@
     top: 80%;
     left: 95%;
   }
-  .cafe-img {
-    width: 300px;
-  }
-  .welcome {
-    font-size: 40px;
-  }
-  .cafe-container {
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+
 }
 @media screen and (max-width: 376px) {
   .powerside {
@@ -4645,15 +4288,5 @@
     top: 80%;
     left: 95%;
   }
-  .cafe-img {
-    width: 300px;
-  }
-  .welcome {
-    font-size: 35px;
-  }
-  .cafe-container {
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, 85%);
-  }
+ 
 }
